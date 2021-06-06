@@ -1,0 +1,859 @@
+% SPDX-License-Identifier: UNLICENSED
+
+turningcheck := 0;
+def beginjur(expr ch, width) =
+	beginchar(ch, width, 10pt#, 0pt#) enddef;
+
+num_width := 7u#;
+aheight := .75;
+
+beginjur(" ", 5u#);
+relax;
+endchar;
+
+beginjur("0", num_width);
+	penmonglyph(mg_t) ;
+	bot z1 = (0.5w, 0);
+	rt z2 = (w - sx#/2, 0.5hh#);
+	top z3 = (0.5w, hh#);
+	lft z4 = (sx#, 0.5hh#);
+	%draw z1..z2..z3..z4..cycle;
+	penpos1(mg_t, -30);
+	penpos2(mg_t, 30);
+	penpos3(mg_t, 120);
+	penpos4(mg_t, 170);
+	penstroke z1e..z2e..z3e..z4e..cycle;
+	penlabels(1,2,3,4);
+endchar;
+
+beginjur("1", num_width);
+	penmonglyph(mg_t) ;
+	top lft z1 = (sx#/2, hh#);
+	top rt z2 = (w-sx#, hh#);
+
+	penpos1(mg_t, 20);
+	penpos2(mg_t, 20);
+	penstroke z1e--z2e;
+
+	rt z22 = (w-sx#, hh#);
+	bot rt z3 = (w-sx#, 0);
+	penpos22(mg_t, 20);
+	penpos3(mg_t, 15);
+	penstroke z22e--z3e;
+
+
+	z5 = ((x1+x2)/2, y1);
+	z6 = (xpart z5, 0.5 hh#);
+	penpos5(mg_t, 20);
+	penpos6(mg_t, 10);
+	penstroke z5e--z6e;
+
+	% bottom horizontal
+	rt bot z8 = (w-sx#, 0);
+	penpos8(mg_t, 40);
+	bot z4 = (0.5w, 0);
+	penpos4(mg_t, 40);
+	penstroke z4e--z8e;
+
+	penlabels(1,2,3,4,22,5,6,8);
+endchar;
+
+beginjur("2", num_width);
+	penmonglyph(mg_t) ;
+	z1 = (0.5w,0.4hh#);
+	lft z2 = (sx#+0.1w, 0.75hh#);
+	top z3 = (0.5w, hh#);
+	rt z4 = (0.8w-sx#, 0.5hh#);
+	bot lft z5 = (sx#, 0);
+	bot rt z6 = (w-sx#, 0);
+	rt z7 = (w-sx#, 0.3hh#);
+	draw z1...z2...z3...z4{z1-z4}..{down}z5--z6--z7;
+	%penstroke z1e..z2e{up}..z3e{right}..z4e{z1-z4}..{down}z5e--z6e--z7e;
+	penlabels(1,2,3,4,5,6,7);
+endchar;
+
+
+beginjur("3", num_width);
+	penmonglyph(mg_t) ;
+	top lft z11 = (sx#, hh#);
+	lft bot z12 = (sx#, 0);
+	penpos11(mg_t, 15);
+	penpos12(mg_t, 15);
+	penstroke z11e--z12e;
+
+	top lft z21 = (sx#, hh#);
+	top z22 = (w-sx#, hh#);
+	penpos21(mg_t, 20);
+	penpos22(mg_t, 20);
+	penstroke z21e--z22e;
+
+	top z31 = (0.5w, hh#);
+	top z32 = (0.5w, 0.6hh#);
+	z33 = (w-sx#, 0.3hh#);
+	bot z34 = (0.5w, 0);
+	bot z35 = (0.35w, y32/5);
+	penpos31(mg_t, 15);
+	penpos32(mg_t, 15);
+	penpos33(mg_t, 15);
+	penpos34(mg_t, -180+30);
+	penpos35(mg_t, -185+20);
+	%penstroke z31e--z32e{right}..{down}z33e
+	penstroke z31e--z32e{dir -10}..z33e
+	         % {down}
+		  ..{left}z34e..{up}z35e;
+	penlabels(11,12,21,22,31,32,33,34,35);
+endchar;
+
+beginjur("4", num_width);
+	penmonglyph(mg_t) ;
+	top z11 = (sx#, hh#);
+	top z12 = (w-sx#, hh#);
+	penpos11(mg_t, 20);
+	penpos12(mg_t, 20);
+	penstroke z11e--z12e;
+	picture p;
+	p := currentpicture shifted (0, -0.3hh#);
+	addto currentpicture also p;
+	x31 = x32;
+	.66(w - 2sx#)  + sx# = x31;
+	y31 = y11;
+	y32 = 0;
+	penpos31(mg_t, 20);
+	penpos32(mg_t, 20);
+	penstroke z31e--z32e;
+	penlabels(11,12,31,32);
+endchar;
+
+beginjur("5", num_width);
+	penmonglyph(mg_t) ;
+	top y11 = hh#;
+	y11 = y12 = y31;
+	lft x11 = lft x21 = sx#;
+	y21 = y22 = .5hh#;
+	rt x12 = w - sx#;
+	x22 = x31 = x23 =  0.4(x11 + x12);
+	penpos11(mg_t,50);
+	penpos12(mg_t,30);
+	penstroke z11e--z12e;
+	penpos21(mg_t, 50);
+	penpos22(mg_t, 20);
+	penpos225(mg_t, 20);
+	penpos23(mg_t, -180+20);
+	bot y23 = 0;
+	z225 = (x12, (y22+y23)/2);
+	penpos31(mg_t, -180-30);
+	penstroke z11e--z21e--z22e{right}..{down}z225e{down}..{left}z23e--z31e;
+	penlabels(11,12,21,22,225,23,31);
+endchar;
+
+beginjur("6", num_width);
+	penmonglyph(mg_t) ;
+	lft x11 = lft x22 = lft x23 = sx#/2;
+	rt x12 = w - sx#/2;
+	top y11 = top y12 = hh#;  
+	penpos11(mg_t, 40);
+	penpos12(mg_t, 40);
+	penstroke z11e--z12e;
+	x31 = x32 = (x11+x12)/2;
+	y31 = y11;
+	bot y22 = bot y32 = 0;
+	y23 = .4(y11+y22);
+	x225 = .45(x11+x31);
+	y225 = .2(y22+y23);
+	penpos22(mg_t, 40);
+	z91l = z22l;
+	z91r  = z22r rotatedaround(z22l, 50);
+	z91 = .5[z91r, z91l];
+	penpos225(mg_t, 180);
+	penpos23(mg_t, 270);
+	penpos31(mg_t, 40);
+	penpos32(mg_t, 40);
+	penstroke z11e--z22e;
+	penstroke z91e{right}...{up}z225e{up}...{left}z23e;
+	penlabels(11,12,22,23,31,32);
+	penstroke z31e--z32e;
+	z41 = (x12, y32);
+	penpos41(mg_t, 40);
+	penstroke z12e--z41e;
+endchar;
+
+beginjur("7", num_width);
+	penmonglyph(mg_t);
+	lft x1 = lft x4 = sx#;
+	x2 = x5 = (x1+x3)/2;
+	rt x3 = rt x6 = w - sx#;
+	x7 = (x2+x3)/2;
+	top y1 = top y2 = top y3 = hh#;
+	y4 = y5 = y6 = (y1+y7)/2;
+	y7 = 0;
+	penpos1(mg_t,20);
+	penpos2(mg_t,20);
+	penpos3(mg_t,20);
+	penpos4(mg_t,20);
+	penpos5(mg_t,20);
+	penpos6(mg_t,20);
+	penpos7(mg_t,20);
+	penstroke z1e--z3e;
+	penstroke z2e--z5e;
+	penstroke z4e--z6e--z7e;
+endchar;
+
+beginjur("8", num_width);
+	penmonglyph(mg_t);
+	rt x2 = rt x8 = w - sx#;
+	top y2 = hh#;
+	bot y8 = 0;
+	penpos2(mg_t, 20);
+	penpos8(mg_t, 20);
+	rt x6 = x2;
+	y6 = (y2+y8)/2;
+	z4 = (.7(x5+x6), y6);
+	y5 = y4;
+	x5 = sx#;
+	x7 = (x5 + x4) / 2;
+	y7 = y8;
+	x3 = x7;
+	x1 = (x3 + x4) / 2;
+	y3 = 2(y5 + y4) / 3;
+	y1 = (y2+y6)/2;
+	z11 = z1;
+	z44 = z6;
+	penpos1(mg_t, -100);
+	penpos3(mg_t, 10);
+	penpos4(mg_t, 80);
+	penpos11(mg_t, 270);
+	penstroke z2e--z8e;
+	penstroke z1e{left}..z3e{down}..z4e{right}..{left}cycle;
+	%penpos44(mg_t, 40);
+	%penpos5(mg_t, 80);
+	%penpos7(mg_t, 170);
+	penpos44(mg_t, 40);
+	penpos5(mg_t, 40);
+	z55l = z5l;
+	z55r = z5r rotatedaround(z5l, 140);
+	z55 = .5[z5l, z5r];
+	penpos7(mg_t, 270);
+	penpos6(mg_t, 270);
+	penstroke z44e--z5e--z55e...{(1,-1)}z7e{(1,1)}...z6e;
+
+endchar;
+
+beginjur("9", num_width);
+	penmonglyph(mg_t);
+	lft x11 = lft x22 = sx#/2;
+	rt x12 =  rt x91 = rt x23 = w - sx#/2;
+	top y11 = top y12 = hh#;  
+	penpos11(mg_t, 40);
+	penpos12(mg_t, 40);
+	penstroke z11e--z12e;
+	x31 = x32 = (x11+x12)/2;
+	y31 = y11;
+	bot y22 = bot y32 = 0;
+	y23 = .4(y11+y22);
+	x225 = .43(x12+x31);
+	y225 = .2(y22+y23);
+	penpos22(mg_t, 40);
+	y91 = y22;
+	penpos91(mg_t, 40);
+	penpos225(mg_t, 40);
+	penpos23(mg_t, -50);
+	penpos31(mg_t, 40);
+	penpos32(mg_t, 40);
+	penstroke z11e--z22e;
+	penstroke z91e{left}...{up}z225e{up}...{right}z23e;
+	penlabels(11,12,22,23,31,32);
+	penstroke z31e--z32e;
+	z41 = (x12, y32);
+	penpos41(mg_t, 40);
+	penstroke z12e--z41e;
+endchar;
+
+beginjur("a", 6u#);
+	penmonglyph(mg_t) ;
+	z11 = (sx#, aheight * hh#);
+	z12 = (w-sx#, aheight * hh#);
+	penpos11(0.4mg_t, 90);
+	penpos12(0.4mg_t, 90);
+	penstroke z11e--z12e;
+
+	top lft z21 = (sx#, hh#);
+	bot z22 = (0.5w, 0);
+	top rt z23 = (w-sx#, hh#);
+	draw z21--z22--z23;
+	penlabels(11,12,21,22,23);
+endchar;
+
+beginjur("b", 8u#);
+	penmonglyph(mg_t) ;
+	top z11 = (sx#, hh#);
+	top z12 = (w-sx#, hh#);
+	penpos11(mg_t, 20);
+	penpos12(mg_t, 20);
+	penstroke z11e--z12e;
+
+	top z21 = (sx#+0.1w, 0.5[hh#,y11]);
+	z22 = (x21, 0);
+	penpos21(mg_t, 20);
+	penpos22(mg_t, 20);
+	penstroke z21e--z22e;
+
+	z31 = (x21, 0.4h);
+	z32 = (0.4w, 0.3h);
+	z33 = lft z22;
+	draw z31{right}..{down}z32{down}..{left}z33;
+
+	rt z41 = (0.9w-sx#, y21);
+	bot rt z42 = (0.9w-sx#, 0);
+	penpos41(mg_t, 20);
+	penpos42(mg_t, 20);
+	penstroke z41e--z42e;
+	penlabels(11,12,21,22,31,32,33,41,42);
+endchar;
+
+
+beginjur("c", 6u#);
+	penmonglyph(mg_t) ;
+	z11 = (0.4w, hh#);
+	z12 = (0.4w, 0);
+	penpos11(mg_t, 20);
+	penpos12(mg_t, 20);
+	penstroke z11e--z12e;
+
+	lft z21 = (sx#, 0.8hh#);
+	rt z22 = (w-sx#, 0.5hh#);
+	lft z23 = (sx#, 0.2hh#);
+	penpos21(mg_t, 40);
+	penpos22(mg_t, 0);
+	penpos23(mg_t, 120+180);
+	penstroke reverse z21e{3,1}..{down}z22e;
+	penstroke  z22e{down}..{-3,1}z23e;
+	penlabels(11,12,21,22,23);
+endchar;
+
+
+beginjur("d", 6u#);
+	penmonglyph(mg_t) ;
+	z11 = (0.6w, hh#);
+	z12 = (0.6w, 0);
+	penpos11(mg_t, 20);
+	penpos12(mg_t, 20);
+	penstroke z11e--z12e;
+
+	rt z21 = (w-sx#, 0.8hh#);
+	lft z22 = (sx#, 0.5hh#);
+	rt z23 = (w-sx#, 0.2hh#);
+	penpos21(mg_t, -40);
+	penpos22(mg_t, 0);
+	penpos23(mg_t, 50);
+	penstroke reverse z22e{up}..{3, -1}z21e;
+	penstroke  reverse z22e{down}..{3,1}z23e;
+	penlabels(11,12,21,22,23);
+endchar;
+
+beginchar("e", 6u#, 10pt#, 3pt#);
+	penmonglyph(mg_t) ;
+	top lft z1 = (sx#, hh#);
+	z2 = 0.8[z1, z3];
+	rt z3 = (w-sx#, hh#);
+	lft z4 = (sx#, .4hh#);
+	draw z4--z1--z3;
+
+	bot z6 = (x2, -.5d);
+	lft bot z5 = (sx#, -.5d);
+	draw z2..controls z6..z5;
+endchar;
+
+beginjur("f", 7u#);
+	penmonglyph(mg_t) ;
+	top lft z1 = (sx#, hh#);
+	top rt z2 = (w - 2sx#, hh#);
+	z3 = (x1, .5hh#);
+	z4 = .5[z3, z5];
+	rt z5 = (w - sx#-mg_t, y3);
+	bot z6 = (x1, 0);
+	z7 = (x4, y6);
+	z8 = (x5, y6);
+	draw z2--z1--z6;
+	draw z3--z5{curl 0.1}..z8..controls z7..{up}z4;
+endchar;
+
+beginjur("g", 7u#);
+	penmonglyph(mg_t) ;
+	top z1 = (.5w, hh#);
+	z2 = z1 rotatedaround((.5w,.5hh#), -55);
+	lft z3 = (sx#, .5hh#);
+	bot z6 = (x1, 0);
+	z4 = (.6w, .4hh#);
+	z7 = (x4, .5(0+y4));
+	z8 = (x4, aheight * hh#);
+	rt z5 = (w - sx#, .25hh#);
+	draw z2..z1..z3..z6..{up}z5..{left}z4--z7;
+	draw z8--z7;
+endchar;
+
+
+
+beginjur("h", 7u#);
+	penmonglyph(mg_t) ;
+	top lft z1 = (sx#+.2w, hh#);
+	top z2 = (.5w, hh#);
+	top rt z3 = (w-sx#, hh#);
+	lft z4 = (sx#, .6hh#);
+	z5 = (.5w, .5hh#);
+	z6 = (w-sx#, .6hh#);
+	bot z7 = (x1, 0);
+
+	draw z4..z5..controls z6 and z3..z2..controls z1..z7;
+
+	z8 = (x1, .3hh#);
+	rt z9 = (w - sx#, y8);
+	bot z10 = (x9, 0);
+	draw z8--z9--z10;
+
+endchar;
+
+
+
+beginjur("i", 3u#);
+	penmonglyph(mg_t);
+	dx = .1;
+	dy = .1;
+	%xL = (0.5-dx) * w;
+	%xR = (0.5+dx) * w;
+	xL = sx#;
+	xR = w - sx#;
+	top z1 = (xL, hh#);
+	top z2 = (xR, (1-dy) * hh#);
+	bot z3 = (xL, dy * hh#);
+	bot z4 = (xR, 0);
+	draw z1--z2--z3--z4;
+	z5 = (xL, (0.5+dy) * hh#);
+	z6 = (xR, (0.5-dy) * hh#);
+	draw z5--z6;
+endchar;
+
+beginjur("j", 7u#);
+	penmonglyph(mg_t);
+	lft top z1 = (sx# + 0.1(w-2sx#), hh#);
+	rt top z2 = (sx# + 0.8(w-2sx#), hh#);
+	top z3 = (sx# + 0.6(w-2sx#), y1);
+	z4 = (x3, 0.9hh#);
+	z5 = (x3, 0.2hh#);
+	z6 = (x3, 0);
+	z7 = (sx#, 0.25hh#);
+	z8 = (0.5w, 0.5hh#);
+	z9 = (w-sx#, 0.5hh#);
+	draw z1--z2..controls z3..z4--z5..controls z6..z7..{right}z8--z9;
+
+endchar;
+
+beginjur("k", 7u#);
+	penmonglyph(mg_t);
+	top lft z1 = (sx#, hh#);
+	top rt z2 = (w-sx#, hh#);
+	bot lft z3 = (sx#, 0);
+	bot rt z4 = (w-sx#, .4hh#);
+	bot z5 = (.5w, .5(0+y4));
+	bot rt z6 = (w-sx#, 0);
+
+	draw z3--z1--z2--z6{left}..z5..{right}z4;
+
+endchar;
+
+
+beginjur("l", 7u#);
+	penmonglyph(mg_t);
+	top z1 = (0.5w, hh#);
+	top rt z2 = (w-sx#, hh#);
+	bot lft z3 = (0, 0);
+	bot z4 = (0.5w, 0);
+	bot z8 = (0.6(x4+x6), 0);
+	top rt z6 = (w-sx#, hh#);
+	bot rt z7 = (w-sx#, 0);
+	draw z3{right}..controls z4..{up}z1;
+	draw z3--z4{right}..controls z8..{up}z6;
+	draw z6{down}..controls z8..{right}z7;
+endchar;
+
+beginjur("m", 9u#);
+	penmonglyph(mg_t);
+	top y1 = top y3 = top y5 = hh#;
+	bot y2 = bot y4 = 0;
+	x2-x1 = 1.3(x3-x2) = 1.3(x4-x3) = x5-x4 = (w-2sx#-2mg_t)/4;
+	x3 = .5w;
+	draw z1--z2--z3--z4--z5;
+	y6 = y7 = y8 = aheight * hh#;
+	x6 = sx#;
+	rt x7 = w - sx#;
+	x8 = .5w;
+	draw z6 ..controls z8.. z7;
+endchar;
+
+
+beginjur("n", 6u#);
+	penmonglyph(mg_t);
+	top lft z1 = (sx#, hh#);
+	bot lft z2 = (sx#, 0);
+	top lft z3 = (sx#, 0.9hh#);
+	top rt z4 = (w-sx#, hh#);
+	bot rt z5 = (w-sx#, 0);
+	bot z6 = (0.6w, 0.02h);
+	draw z1--z2..controls z3..z4--z5--z6;
+endchar;
+
+beginjur("o", 7u#);
+	penmonglyph(mg_t);
+	x5 = sx#;
+	x6 = w - sx#;
+	y5 = y6 = .5hh#;
+	draw z5--z6;
+	x1 = x3 = .5w;
+	top y1 = hh#;
+	bot y3 = 0;
+	lft x2 = sx# + 0.1(x6-x5);
+	rt x4 = sx# + 0.9(x6-x5);
+	y2 = y4 = .5hh#;
+	draw z1..z2..z3..z4..cycle;
+endchar;
+
+beginjur("p", 8u#);
+	penmonglyph(mg_t);
+	lft x1 = lft x2 = sx#;
+	x3 = lft x2 + .5mg_t;
+	top y1 = hh#;
+	bot y2 = 0;
+	draw z1--z2;
+	bot y3 = bot y4 = bot y5 = .1hh#;
+	x4 = x3 +.1w;
+	x5 = x6 = w - sx#;
+	x7 = .5w;
+	y6 = y7 = aheight * hh#;
+	draw z3..{right}z4{right}..controls z5 and z6..z7;
+endchar;
+
+beginjur("q", 7u#);
+	penmonglyph(mg_t);
+	x1 = x3 = .5w;
+	top y1 = hh#;
+	bot y3 = 0;
+	lft x2 = sx#;
+	rt x4 = w - sx#;
+	y2 = y4 = .5hh#;
+	draw z1..z2..z3..z4..cycle;
+	rt x7 = rt x8 = w - sx#;
+	top y7 = hh#;
+	bot y8 = 0;
+	draw z7--z8;
+endchar;
+
+beginjur("r", 7u#);
+	penmonglyph(mg_t);
+	lft x1 = lft x2 = sx#+0.1(w-2sx#);
+	top y1 = hh#;
+	bot y2 = 0;
+	draw z1--z2;
+	z3 = (.5w, .9hh#);
+	z35 = (sx#+0.8(w-2sx#), .9hh#);
+	z4 = (sx#+0.8(w-2sx#), .5hh#);
+	z5 = (.6(x6+x4), .1hh#);
+	z55 = 0.5[z5, z6];
+	z6 = (x1, 0.88y4);
+	z7 = (sx#, y4);
+	z8 = (w-sx#, y4);
+	draw z3{right}..controls z35..z4{down}..{left}z5{left}
+		..z55..z6;
+	draw z7--z8;
+endchar;
+
+beginjur("s", 8u#);
+	penmonglyph(mg_t);
+	lft x1 = sx#;
+	lft x2 = w - sx#;
+	y1 = y2 = aheight * hh#;
+	draw z1--z2;
+	z4 = 0.67[z1,z2];
+	z3 = (.5(x4+x2), hh#);
+	bot z5 = (.5(x1+x4), 0);
+	x6 = x7 = x1+0.2(x2-x1);
+	y6 = .2hh#;
+	y7 = hh#;
+	draw z2{up}..{left}z3..z4..{left}z5..{up}z6--z7;
+endchar;
+
+% ss
+beginjur(oct"001", 9u#);
+	penmonglyph(mg_t);
+	lft x1 = sx#;
+	lft x2 = w - sx#;
+	y1 = y2 = aheight * hh#;
+	draw z1--z2;
+	z4 = 0.67[z1,z2];
+	x44 = x5 - (x2-x3);
+	y44 = y4;
+	z3 = (.5(x4+x2), hh#);
+	bot z5 = (x4-.25(x2-x4), 0);
+	z6 = (x44-(x2-x3), hh#);
+	z7 = (x44-(x2-x4), y4);
+	%x6 = x7 = x1+0.2(x2-x1);
+	%y6 = .2hh#;
+	%y7 = hh#;
+	draw z2{up}..{left}z3..z4..{left}z5..{up}z44; %..{up}z6--z7;
+	draw z44{up}..{left}z6..z7;
+endchar;
+
+beginjur("t", 8u#);
+	penmonglyph(mg_t);
+	lft x1 = lft x2 = sx#;
+	top y1 = hh#;
+	bot y2 = bot y3 = 0;
+	x3 = w - .5sx#;
+	draw z1{down}..controls z2..{right}z3;
+endchar;
+
+beginjur("u", 8u#);
+	penmonglyph(mg_t);
+	bot y1 = bot y4 = 0;
+	y2 = y3 = hh#;
+	lft x1 = lft x2 = sx#+.1w;
+	z22 = z2 + (.2w, 0);
+	z33 = z3 - (.2w, 0);
+	rt x3 = rt x4 = w - sx# - .1w;
+	draw z1{up}..controls z2..z22--z33..controls z3..{down}z4;
+	bot y5 = bot y6 = .2hh#;
+	lft x5 = sx#;
+	rt x6 = w-sx#;
+	draw z5--z6;
+endchar;
+
+beginjur("v", 6u#);
+	penmonglyph(mg_t);
+	lft x1 = sx#;
+	rt x3 = w-sx#;
+	bot y1 = bot y3 = 0;
+	top z2 = (.5(x1+x3), hh#);
+	draw z1--z2--z3;
+endchar;
+
+beginjur("w", 8u#);
+	penmonglyph(mg_t);
+	top y1 = top y2 = top y3 = hh#;
+	bot y4 = bot y5 = bot y6 = 0;
+	lft x1 = lft x4 = sx#;
+	x2 = x5 = .5w;
+	rt x3 = rt x6 = w-sx#;
+	lft z91 = (x1, .5hh#);
+	z92 = (.5(x1+x2), .5(y91+y1));
+	draw z91..z92..z1--z4--z6--z3;
+	draw z2--z5;
+endchar;
+
+beginjur("x", 6u#);
+	penmonglyph(mg_t);
+	draw (sx#,hh#)...(.5w, .6hh#)..(w-sx#,hh#);
+	draw (sx#,  0)..(.5w, .4hh#)...(w-sx#,0);
+endchar;
+
+
+beginjur("y", 8u#);
+	penmonglyph(mg_t);
+	top y1 = top y2 = top y3 = hh#;
+	bot y4 = bot y5 = bot y6 = 0;
+	lft x1 = lft x4 = sx#;
+	x2 = x5 = .5w;
+	rt x3 = rt x6 = w-sx#;
+	draw z1--z4--z6--z3;
+	draw z2--z5;
+endchar;
+
+beginjur("z", 8u#);
+	penmonglyph(mg_t);
+	rt z1 = (sx#+.9(w-2sx#), hh#);
+	lft z2 = (sx#, y1);
+	rt z3 = (sx#+.9(w-2sx#), 0);
+	rt z4 = (x2, y3);
+	draw z1--z2--z3--z4;
+	z5 = (sx#, .5hh#);
+	z6 = (w-sx#, .5hh#);
+	draw z5--z6;
+endchar;
+
+beginjur(",", 4u#);
+	penmonglyph(mg_t);
+	z1 = (.5w, .5hh#);
+	draw z1--(z1+(1pt, -1pt));
+endchar;
+
+beginjur(".", 4u#);
+	penmonglyph(mg_t);
+	z1 = (.5w, .5hh#);
+	z2 = (.5w, y1+.25hh#) rotatedaround(z1, 30);
+	z3 = (.5w, y1+.25hh#) rotatedaround(z1, -30);
+	draw z1--(z1+(1pt, -1pt));
+	draw z2--(z2+(1pt, -1pt));
+	draw z3--(z3+(1pt, -1pt));
+endchar;
+
+beginchar(hex"22", 4u#, 10pt#, 3pt#); % quotation
+	penmonglyph(mg_t);
+	z1 = (.30w, .7hh#);
+	z2 = (x1-.25w, -d);
+	z3 = (.5w+(.5w-x1), y1);
+	z4 = (x3-.25w, y2);
+	draw z1--z2;
+	draw z3--z4;
+endchar;
+
+beginjur("!", 8u#);  % light god
+	penmonglyph(mg_t);
+	%-----upper
+	lft x1 = sx# + .1w;
+       	x3 = sx# + .4w;
+	rt x5 = sx# + .8w;
+	top y1 = top y3 = top y5 = hh#;
+	y2 = y4 = .7hh#;
+	x2 = .6(x1+x3);
+	x4 = .4(x3+x5);
+	%----lower
+	x6 = 2sx#;
+	x8 = .5w;
+	x10 = sx# + .8w;
+	x11 = w-sx#;
+	bot y6 = bot y8 = bot y10 = 0;
+	y7 = y9 = .3hh#;
+	y11 = .5(y6+y7);
+	x7 = x6+.6(x8-x6);
+	x9 = x8+.6(x10-x8);
+	draw z1{down}..z2..{up}z3{down}..z4..{z6-z5}z5
+		--z6--z7..{z6-z5}z8{z5-z6}..z9..{right}z10..z11;
+endchar;
+
+beginjur("+", 8u#);  % darkness god
+	penmonglyph(mg_t);
+	z1 = (sx#, .7hh#);
+	z2 = (w-sx#, .8hh#);
+	z3 = (.25w, .5hh#);
+	top z4 = (.6w, hh#);
+	bot z5 = (.6w, 0);
+	z6 = (sx#, .3hh#);
+	z7 = (w-1.5sx#, .55hh#);
+	z8 = (.4w, .25hh#);
+	z9 = (w-2sx#, .25hh#);
+	draw z1{curl 1}..{curl 0.8}z2{curl 0.8}..{curl 0.8}z3--z4--z5
+		{dir 150}..{dir 100}z6--z7--z8--z9;
+endchar;
+
+beginjur("*", 8u#);  % life god
+	penmonglyph(mg_t);
+	top z1 = (2sx#, hh#);
+	z2 = (2sx#, .6hh#);
+	z22 = (.5w, .6hh#);
+	rt z3 = (w-2sx#, .6hh#);
+	top rt z4 = (w-sx#, hh#);
+	top z5 = (.5w, hh#);
+	bot z6 = (.5w, 0);
+	bot z7 = (sx#, .4hh#);
+	rt z8 = (.8w, .4hh#);
+	draw z1{down}..controls z2 and z22..{right}z3..z4--z5--z6
+		{left}..{up}z7--z8
+endchar;
+
+beginjur("%", 8u#);  % water god
+	penmonglyph(mg_t);
+	lft z1 = (sx#, .6hh#);
+	lft z2 = (sx#, hh#);
+	lft z3 = (sx#+.4(w-2sx#), hh#);
+	lft z4 = (sx#+.5(x3-x5), .1hh#);
+	lft z5 = (sx#, .2hh#);
+	rt z6 = ((x7+w-sx#)/2, .8hh#);
+	rt z7 = (sx#+.8(w-2sx#), .5hh#);
+	rt z8 = (x6, .3hh#);
+	bot z9 = (x7, 0);
+	bot z10 = (w-sx#, .1hh#);
+	draw z1..controls z2 and z3..z4..z5{curl 0.8}
+		..controls (0.5[z5,z6] shifted ((dir 130)*(.2w)))..z6
+		..{dir 315}z7{dir 30}..z8..z9{right}..z10;
+endchar;
+
+beginjur("#", 8u#);  % fire god
+	penmonglyph(mg_t);
+	ww := w - 2sx#;
+	lft z1 = (sx#, .8hh#);
+	z2 = (sx#+.25ww, .6hh#);
+	top z3 = (.5w, hh#);
+	bot z4 = (.5w, .1hh#);
+	bot z5 = (sx#+.4ww, 0);
+	z6 = (sx#+.2ww, .2hh#);
+	z7 = (sx#+.8ww, .83hh#);
+	z8 = (sx#+.7ww, .6hh#);
+	z9 = (sx#+.4ww, .4hh#);
+	z10 =(sx#+.7ww, .3hh#);
+	z11 =(sx#+.4ww, .2hh#);
+	z12 =(sx#+.7ww, .1hh#);
+	draw z1{down}..{right}z2..{up}z3--z4
+		..controls z5..z6{curl 0.2}..{right}z7
+		..z8..z9--z10--z11--z12;
+endchar;
+
+beginjur("@", 8u#);  % wind god
+	penmonglyph(mg_t);
+	ww := w - 2sx#;
+	top lft z1 = (sx#, hh#);
+	z2 = ((x1+x2)/2, .85hh#);
+	top z3 = (sx#+.2ww, hh#);
+	lft z4 = (sx#, .5hh#);
+	bot z5 = (.5w, 0);
+	rt z6 = (sx#+ww, .5hh#);
+	top z7 = (.5w, hh#);
+	z8 = (sx#+.4ww, .6hh#);
+	z9 = (sx#+.7ww, .6hh#);
+	z10 = (sx#+.5ww, .5hh#);
+	z11 = (sx#+.7ww, .4hh#);
+	z12 = (sx#+.5ww, .3hh#);
+	z13 = (sx#+.7ww, .3hh#);
+
+	draw z1{down}..{right}z2..{up}z3
+		{down}..{down}z4..{right}z5..{up}z6..{left}z7
+		..{down}z8{right}..z9..{dir 210}z10
+		{dir 30}..z11..z12..{right}z13
+		;
+endchar;
+
+beginjur("$", 6u#);  % soil god
+	penmonglyph(mg_t);
+	ww := w - 2sx#;
+	z1 = (sx#, .7hh#);
+	z2 = (sx#+.4ww, hh#);
+	z3 = (sx#+.4ww, y1);
+	z4 = (sx#+.8ww, hh#);
+	z5 = (sx#+.8ww, y1);
+	z6 = (sx#+.2ww, .4hh#);
+	z7 = (x9, .1hh#);
+	rt z8 = (sx#+ww, hh#/3);
+	bot z9 = (sx#, 0);
+	bot rt z10 = (w-sx#, 0);
+	draw z1{dir 60}..z2..{dir (180+60)}z3{dir 60}..z4
+		..{dir (180+60)}z5
+		..controls z6 and z7..{z9-z8}z8--z9--z10
+		;
+endchar;
+
+ligtable "a": "l" kern -1.2u#, "m" kern -.6u#;
+ligtable "e": "m" kern -.6u#, "n" kern -1.2u#, skipto 1;
+ligtable "f": "e" kern -2u#;
+ligtable "t": "e" kern -4u#, "a" kern -2u#, "m" kern -2u#, skipto 1;
+ligtable "o":"p":"q":"r":
+1::
+    "h" kern -.6u#,
+    "i" kern -.6u#,
+    "l" kern -.6u#,
+    "o" kern -.6u#,
+    "q" kern -.6u#,
+    "r" kern -.6u#,
+    "s" kern -.6u#,
+    "u" kern -.6u#,
+    "v" kern -0.6u#;
+ligtable "m": "a" kern -1.5u#, "l" kern -1.2u#;
+ligtable "s": "s" =: oct"001";
+ligtable "v": "a" kern -2u#;
+end
+

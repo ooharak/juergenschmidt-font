@@ -1,0 +1,25 @@
+% SPDX-License-Identifier: UNLICENSED
+
+mode_setup;
+font_identifier := "Juergen-Manuscript";
+font_size 10pt#;
+u# = 1pt#;
+sx# = 0.6pt;
+hh# = 10pt - 1.5pt;
+font_normal_space 0.5pt; % no stretching or shrinking
+font_quad 10pt;
+font_extra_space 0.5pt;
+
+mg_t := 1pt;
+
+def penmonglyph(expr si) =
+	pickup makepen ((-.3,0)--(-.5,-.3)--(.5,.5)--cycle) scaled si
+enddef;
+
+def penstroke text t =
+        forsuffixes e = l,r: path_.e := t; endfor;
+        draw path_.l
+enddef;
+
+
+input jurbase;
