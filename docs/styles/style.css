@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "stylo";
+       src: url("../fonts/Juergen-Stylo-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "manuscript";
+       src: url("../fonts/Juergen-Manuscript-Medium.woff2") format("woff2");
+}
+.s { font-family: "stylo"; font-weight: normal;}
+.sL { font-family: "stylo"; font-weight: normal; font-size: 20pt;}
+.m { font-family: "manuscript"; font-weight: normal;}
+B { font-family: "manuscript"; font-weight: normal;}
+td B { font-family: "manuscript"; font-weight: normal; font-size: 20pt;}
+.mL { font-family: "manuscript"; font-weight: normal; font-size: 20pt;}
+code { font-family: 'Courier new', courier, monospace; }
+rt { color: darkred; }
+table { border-collapse: collapse; }
+th { border-bottom: solid 1px; }
+td { border-bottom: dotted 1px; }
+table thead { background-color: lightgrey; }
+table td { font-size: 16pt; }
+td, th { padding-right: 10pt; }
