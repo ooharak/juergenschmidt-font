@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: "stylo";
-       src: url("{{'/fonts/Juergen-Stylo-Medium.woff2'|absolute_url}}") format("woff2");
+       src: url("{{'../fonts/Juergen-Stylo-Medium.woff2'|absolute_url}}") format("woff2");
 }
 @font-face {
   font-family: "manuscript";
-       src: url("{{'/fonts/Juergen-Manuscript-Medium.woff2'|absolute_url}}") format("woff2");
+       src: url("{{'../fonts/Juergen-Manuscript-Medium.woff2'|absolute_url}}") format("woff2");
 }
 .s { font-family: "stylo"; font-weight: normal;}
 .sL { font-family: "stylo"; font-weight: normal; font-size: 20pt;}
