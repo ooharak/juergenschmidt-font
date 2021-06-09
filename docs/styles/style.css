@@ -7,17 +7,25 @@
   font-family: "manuscript";
        src: url("../fonts/Juergen-Manuscript-Medium.woff2") format("woff2");
 }
-.s { font-family: "stylo"; font-weight: normal;}
-.sL { font-family: "stylo"; font-weight: normal; font-size: 20pt;}
-.m { font-family: "manuscript"; font-weight: normal;}
-B { font-family: "manuscript"; font-weight: normal;}
-td B { font-family: "manuscript"; font-weight: normal; font-size: 20pt;}
-.mL { font-family: "manuscript"; font-weight: normal; font-size: 20pt;}
+.s, js { font-family: "stylo"; font-weight: normal;}
+.sL { font-family: "stylo"; font-weight: normal; font-size: 24pt;}
+.m, jm, B { font-family: "manuscript"; font-weight: normal;}
+td B, .ML { font-family: "manuscript"; font-weight: normal; font-size: 24pt;}
 code { font-family: 'Courier new', courier, monospace; }
-rt { color: darkred; }
 table { border-collapse: collapse; }
 th { border-bottom: solid 1px; }
 td { border-bottom: dotted 1px; }
 table thead { background-color: lightgrey; }
 table td { font-size: 16pt; }
 td, th { padding-right: 10pt; }
+h2 { font-size: 20pt; margin-top: 30pt; }
+h3 { font-size: 18pt; margin-top: 30pt; }
+h4 { font-size: 16pt; }
+body { 
+  margin: 20pt; 
+}
+body > * { margin-left: 20pt; width: 90%; }
+h1, h2, h3 { margin-left: 5pt; }
+h1 { text-align: center; }
+h3::before{ content: "\02712\0fe0f"; }
+h2::before{ content: "\01f4d6"; }
