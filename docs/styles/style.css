@@ -5,7 +5,7 @@
 }
 @font-face {
   font-family: "manuscript";
-       src: url("../fonts/Juergen-Manuscript-Medium.woff2'") format("woff2");
+       src: url("../fonts/Juergen-Manuscript-Medium.woff2") format("woff2");
 }
 .s { font-family: "stylo"; font-weight: normal;}
 .sL { font-family: "stylo"; font-weight: normal; font-size: 20pt;}
