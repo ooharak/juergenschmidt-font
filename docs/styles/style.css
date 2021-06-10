@@ -7,10 +7,14 @@
   font-family: "manuscript";
        src: url("../fonts/Juergen-Manuscript-Medium.woff2") format("woff2");
 }
-.s, js { font-family: "stylo"; font-weight: normal;}
-.sL { font-family: "stylo"; font-weight: normal; font-size: 24pt;}
+.s, js { font-family: "stylo"; font-weight: normal; }
+.sL { font-family: "stylo"; font-weight: normal; font-size: 18pt; 
+	word-break:break-all;
+}
 .m, jm, B { font-family: "manuscript"; font-weight: normal;}
-td B, .ML { font-family: "manuscript"; font-weight: normal; font-size: 24pt;}
+td B, .ML { font-family: "manuscript"; font-weight: normal; font-size: 18pt;
+	word-break:break-all;
+}
 code { font-family: 'Courier new', courier, monospace; }
 table { border-collapse: collapse; }
 th { border-bottom: solid 1px; }
@@ -18,14 +22,25 @@ td { border-bottom: dotted 1px; }
 table thead { background-color: lightgrey; }
 table td { font-size: 16pt; }
 td, th { padding-right: 10pt; }
+h1 { font-size: 24pt; }
 h2 { font-size: 20pt; margin-top: 30pt; }
 h3 { font-size: 18pt; margin-top: 30pt; }
 h4 { font-size: 16pt; }
+table { width: 450px; }
 body { 
   margin: 20pt; 
+  column-width: 580px;
+  column-gap: 24px;
+  column-rule: 1px solid black;
+  font-family: Hannari, serif;
+  font-size: 14pt;
+  line-break: strict;
 }
-body > * { margin-left: 20pt; width: 90%; }
+body > * { 
+  margin-left: 20pt; 
+}
 h1, h2, h3 { margin-left: 5pt; }
 h1 { text-align: center; }
 h3::before{ content: "\02712\0fe0f"; }
 h2::before{ content: "\01f4d6"; }
+td span { work-break; break-all; }

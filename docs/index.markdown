@@ -2,17 +2,20 @@
 layout: default
 title: Jürgenschmidt font
 ---
-<style>
- red{color:red;}
- blue{color:blue;}
-</style>
 
-# ユルゲンシュミット基本文字フォント <br><jm>juergenschmidt basic script font</jm>
+# ユルゲンシュミット 基本文字フォント<br><js>juergenschmidt</js><br><jm>basic script font</jm>
+
 
 PC上で表示できる、小説『本好きの下剋上』に登場する基本文字のフォントです。<br>
-鈴華先生がデザインされたものを元に作成しています。
+鈴華先生がデザインされたものを元に作成しました。
 
-個人的興味のため研究目的で作成したものなので、本フォントについて作者様、出版社等へのお問い合わせはご遠慮ください。
+このページではこのフォントの成り立ちについて説明しています。
+
+個人的興味を満たす目的で作成したものなので、本フォントについて作者様、出版社等へのお問い合わせはご遠慮ください。
+
+<a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v1.0">
+フォント置き場所はこちら。 (*.ttfファイル)</a>
+
 
 ## <ruby>特徴 <rt class=m>features</rt></ruby>
 
@@ -27,37 +30,45 @@ PC上で表示できる、小説『本好きの下剋上』に登場する基本
 
 ### ２つの書体があります。
 
-|書体|フォント名|グリフ|
-|----|-------|------|
-|<ruby>写本書体<rt class=s>juergen manuscript</rt></ruby>|<code>Juergen-Manuscript</code>|<span class=m>01234567890<br>abcdefghijklmn<br>opqrstuvwxyz,.\"<br>!+\*$@#%</span>|
-|<ruby>硬筆書体<rt class=s>juergen stylo</rt></ruby>|<code>Juergen-Stylo</code>|<span class=s>01234567890<br>abcdefghijklmn<br>opqrstuvwxyz,.\"<br>!+\*$@#%</span>|
+#### <ruby>写本書体<rt class=s>juergen manuscript</rt></ruby> <code>Juergen-Manuscript</code>
 
-#### <ruby>写本書体<rt class=s>juergen manuscript</rt></ruby>
+<div class=mL>0123456789abcdefghijklmnopqrstuvwxyz,."!+&#x2a;$@#%</div>
 
-<div class=mL>01234567890 abcdefghijklmn opqrstuvwxyz,." !+\*$@#%</div>
+写本書体は、文字通り写本風を想像して製作した書体です。
 
-写本書体は、文字通り写本の書体です。
 中世ヨーロッパにおいては、写本の作製は写字生とよばれる人たちによって行われていました。
 一文字一文字羊皮紙に書き写していく気の遠くなるような作業だったので、誤字・脱字は多かったようです。 
 
-筆記具としては、鵞鳥の羽のペンが使われていたそうです。現代日本でマネしようとすると、カリグラフィペンというものが売られています。そのようなペンは、ペン先がボールペンのように真円ではなく、平べったい形をしていて、それを常に角度が同じになるように持って文字を書くと、縦横で太さが異なる独特の字形が生まれます。私は、平べったい筆先を実現するために、アラビア書道の第一人者である本田孝一先生が、アラビア書道のために製作していた方法を参考にして、竹筆を作り、使っていたことがあります。
+筆記具としては、<ruby>鵞鳥<rt>がちょう</rt></ruby>の羽のペンが使われていたそうです。現代日本でマネしようとすると、カリグラフィペンというものが売られています。そのようなペンは、ペン先がボールペンのように真円ではなく、平べったい形をしていて、それを常に角度が同じになるように持って文字を書くと、縦横で太さが異なる独特の字形が生まれます。私は、平べったい筆先を実現するために、アラビア書道の第一人者である本田孝一先生が、アラビア書道のために製作していた方法を参考にして、竹筆を作り、使っていたことがあります。
 
 書体にもよるのだとは思いますが、昔の羊皮紙は高かったため、一枚になるべく多くの情報を詰め込もうとした結果、文字はどうしても判読できるぎりぎりまで狭く書かれたようでして、そのためペン先の太さの縦横の差が、より強調される結果となっているのかもしれません。
 実在したグーテンベルクが印刷した有名な42行聖書の書体も、結局はこれ系の伝統を汲んだ書体らしいです。
 
-ユルゲンシュミット世界においても、写本は似たような書体で書かれているのかなと、想像してこういう字形にしてみました。聖典とかに合いそうですね。
+ユルゲンシュミット世界においても、写本は似たような書体で書かれているのかと、想像してこういう字形にしてみました。聖典とかに合いそうな気がしています。
 
-#### <ruby>硬筆書体<rt class=s>juergen stylo</rt></ruby>
+文章を組んでみた例として、西暦842年の有名なストラスブールの誓いの一節を掲げます。詳細に興味がある方はググってみてください。
 
-<div class=sL>01234567890 abcdefghijklmn opqrstuvwxyz,." !+\*$@#%</div>
+<div class=m>
+pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant, in quant deus savir et podir me dunat, si saluarai eo cist meon fradre karlo, et in aiudha, et in cadhuna cosa, si cum om per dreit son fradra salvar dist.
+</div>
+
+#### <ruby>硬筆書体<rt class=s>juergen stylo</rt></ruby> <code>Juergen-Stylo</code>
+
+<div class=sL>0123456789abcdefghijklmnopqrstuvwxyz,."!+&#x2a;$@#%</div>
 
 どちらかというとこちらのほうが、アニメなどで登場する字形により近いと思われます。
 硬筆書体という名前を当ててみましたが、フォント名はStylo (ペン) となっていて一定しません。感覚的に付けたものなので深い意味はありません。
 
 このようにほぼ均一な太さの文字を描くには、羊皮紙はあまり適していないようにも思うのですが、ユルゲンシュミットの人はどうしているのでしょう。何しろ魔法がある世界なので、我々の常識とは違う法則が働いていて、皮をなめすのにメッサーを使ったり、誤字脱字なんかもヴァッシェンで何とかなったりするのかもしれません。
 
-それとも、これは木簡に書くのに適した字体であるとも考えられます。
-南アジアのタミル文字などの字形は、聞くところによると、貝葉といって、ヤシの葉を紙代わりにして文字を書くので、繊維に沿って葉が割れてしまうことを防ぐために、角ばった字形を避け、丸っこい文字になったらしいです。
+あるいは、これは木簡に書くのに適した字体であるとも考えられます。
+南インドの文字の丸っこい字形は、<ruby>貝葉<rt>ばいよう</rt></ruby>(<ruby>ତାଳପତ୍ର<rt>tālapatra</rt></ruby>)といって、ヤシだか<ruby>棕櫚<rt>しゅろ</rt></ruby>だかの葉を紙代わりにして文字を書くので、繊維に沿って葉が割れてしまうことを防ぐためだということです。もしかしたら、ユルゲンシュミットで使われている木簡の木の材質には、この字体が適しているのかもしれません。
+
+硬筆書体についても、写本書体で掲げたのと同じ文章を組んでみました。
+
+<div class=s>
+pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant, in quant deus savir et podir me dunat, si saluarai eo cist meon fradre karlo, et in aiudha, et in cadhuna cosa, si cum om per dreit son fradra salvar dist.
+</div>
 
 ### カーニング(文字間隔)が調整されています。
 
@@ -69,6 +80,8 @@ PC上で表示できる、小説『本好きの下剋上』に登場する基本
 
 例えばフェルディナンド <span class=mL>ferdinand</span>という綴りの場合、<ruby><span class=ML>f</span><rt>f</rt></ruby>と後続の<ruby><span class=mL>e</span><rt>e</rt></ruby>との間隔は、他の文字との組み合わせの場合よりも明らかに狭くなっています。いくつかの文字には、このようなカーニングが効くようになっています。
 
+なお、合字も盛り込んだのですが、魔法陣、ならぬ、プログラム上の問題があるらしく、今のところうまく表現できていません。(クラッセンブルク<js>klassenburg</js>の<js>ss</js>とかエーレンフェスト<js>ehrenfest</js>の<js>en</js>を合字にしたかった…)
+
 ### 英数字に加えて、香月先生がTwitterに投稿された大神の記号が含まれています。
 
 | 神 | 記号 | 入力 | 神 | 記号 | 入力 |
@@ -78,7 +91,7 @@ PC上で表示できる、小説『本好きの下剋上』に登場する基本
 |火|<B>#</B>|#|風|<B>@</B>|@|
 |土|<B>$</B>|$|||
 
-記号の割り当ては適当です。いちおう西欧世界において<code>\*</code>が誕生、<code>+</code>が死を表すことを念頭にしました。風が<code>@</code>なのは形が似てるからで、土が<code>$</code>なのはなんとなくsoilを連想したからです。
+記号の割り当ては適当です。いちおう西欧世界において<code>&#x2a;</code>がh誕生、<code>+</code>が死を表すことを念頭に置きました。風が<code>@</code>なのは形が似てるからで、土が<code>$</code>なのはなんとなくsoilを連想したからです。
 
 
 ### カンマ・ピリオド・引用符は勝手に作製しました。
@@ -105,9 +118,23 @@ PC上で表示できる、小説『本好きの下剋上』に登場する基本
 
 <code>ferdinand und rosemain</code> → <span class=sL>ferdinand und rosemain</span>
 
+無理やり英字フォントとして字形だけ変えているので、このテキストを適当のメモ帳などにコピーシテペッタンすると、普通にラテンアルファベットで表示されてしまいます。ちょっと残念ですね。
+
+## どうやって作ったのか
+
+活版印刷に使われる活字は、本編中でも触れられていたかと思いますが、初めに鉄などの硬い金属を彫って<ruby>父型<rt>ふけい</rt></ruby>という凸スタンプ状のものを作るところから始まるそうです。父型を、より軟らかい金属に打ち込んでストライクという凹型を作り、表面を平らに削って母型としたのち、ハンドモールドという<ruby>治具<rt>jig</rt></ruby>にセットして、鉛を流し込んで活字のできあがりです。
+
+では、このフォントはどうやって作ったのかというと、現代の魔法陣を使っています。もう少しわかりやすくいうと、METAFONTというプログラム言語で書いています。
+[ソースコードの一部](https://github.com/ooharak/juergenschmidt-font/blob/main/juerbase.mf)を注意深くご覧いただきますと、座標らしきものと、それらを線で結ぶ旨の指定が読み取れることと思います。これは活字の図形を座標で一つ一つ指定しているのでした。この指定が一苦労でして、Illustratorというソフトを使ったことのある方には、曲線を構成するすべてのポイントを座標指定するようになっているのです、というと大変さがわかっていただけるかもしれません。
+
+もう少し専門的な説明をすると、METAFONTソースを`mf2pt1`でType1フォントに変換し、その後FontForgeでTeXの`*.tfm`から読み込んだメトリック情報をマージしたのち、TrueTypeとWebフォントを生成しています。
+
+とにかく面倒な作業であり、一所懸命魔法陣を描いているフェルディナンド達を後目に「コピーシテペッタン」で一瞬で魔法陣を仕上げてしまう何処かのアウブがいかにチートかということを、つくづく思い知らされました。
+
 ## 参考文献
 
-* Berthier, (ed.); Zali, Anne(ed.). L'aventure des écritures - Naissances. Bibliothèque Nationale de France, 1997, 223p.
-* 印刷博物館. プランタンモレトゥス博物館展 印刷革命がはじまった : グーテンベルクからプランタンへ. 印刷博物館, 2005, 208p., (図録).
+* Berthier, Annie (ed.); Zali, Anne(ed.). *L'aventure des écritures - Naissances*. Bibliothèque Nationale de France, 1997, 223 p.
+* 印刷博物館. プランタン＝モレトゥス博物館展 印刷革命がはじまった : グーテンベルクからプランタンへ. 印刷博物館, 2005, 208 p., (図録).
 * 国立国会図書館. "インキュナブラ". 国立国会図書館. https://www.ndl.go.jp/incunabula/index.html, (参照 2021-06-10).
-
+* 西田達雄(編). 講座言語 第5巻 世界の文字. 4版, 大修館書店, 1986, 413 p.
+* 田村尚志(編). 大人の科学マガジン 小さな活版印刷機. 学研プラス, 2017, 54 p.
