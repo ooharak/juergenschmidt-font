@@ -44,3 +44,7 @@ h1 { text-align: center; }
 h3::before{ content: "\02712\0fe0f"; }
 h2::before{ content: "\01f4d6"; }
 td span { work-break; break-all; }
+#tampon { 
+	position: absolute; left: 20px; top: 100px; opacity: 0.7;
+	contain: layout;
+}
