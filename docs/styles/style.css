@@ -35,6 +35,7 @@ body {
   font-family: Hannari, serif;
   font-size: 14pt;
   line-break: strict;
+  background-image: url('../images/paperpattern.png');
 }
 body > * { 
   margin-left: 20pt; 
