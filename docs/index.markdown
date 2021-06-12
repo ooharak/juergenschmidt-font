@@ -93,7 +93,7 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 |火|<B>#</B>|#|風|<B>@</B>|@|
 |土|<B>$</B>|$|||
 
-記号の割り当ては適当です。いちおう西欧世界において<code>&#x2a;</code>がh誕生、<code>+</code>が死を表すことを念頭に置きました。風が<code>@</code>なのは形が似てるからで、土が<code>$</code>なのはなんとなくsoilを連想したからです。
+記号の割り当ては適当です。いちおう西欧世界において<code>&#x2a;</code>が誕生、<code>+</code>が死を表すことを念頭に置きました。風が<code>@</code>なのは形が似てるからで、土が<code>$</code>なのはなんとなくsoilを連想したからです。
 
 
 ### カンマ・ピリオド・引用符は勝手に作製しました。
