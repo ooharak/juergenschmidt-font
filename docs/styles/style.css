@@ -28,14 +28,19 @@ h3 { font-size: 18pt; margin-top: 30pt; }
 h4 { font-size: 16pt; }
 table { width: 450px; }
 body { 
-  margin: 20pt; 
-  column-width: 580px;
-  column-gap: 24px;
-  column-rule: 1px solid black;
   font-family: Hannari, serif;
   font-size: 14pt;
   line-break: strict;
   background-image: url('../images/paperpattern.png');
+}
+.multicolumn {
+  margin: 20pt; 
+  column-width: 580px;
+  column-gap: 24px;
+  column-rule: 1px solid black;
+}
+textarea {
+  width: 80%;
 }
 body > * { 
   margin-left: 20pt; 
@@ -45,7 +50,9 @@ h1 { text-align: center; }
 h3::before{ content: "\02712\0fe0f"; }
 h2::before{ content: "\01f4d6"; }
 td span { work-break; break-all; }
-#tampon { 
+#tampon { display: none; }
+.multicolumn #tampon { 
+	display: block;
 	position: absolute; left: 20px; top: 100px; opacity: 0.7;
 	contain: layout;
 }
