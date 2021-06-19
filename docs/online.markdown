@@ -12,18 +12,16 @@ title: Jürgenschmidt font online
 
 ## <ruby>写本書体<rt class=s>juergen manuscript</rt></ruby> <code>Juergen-Manuscript</code>
 
-<textarea class=m cols="40" rows="5">
-la teste de scichicosa eut 
+<textarea class=m cols="40" rows="5" placeholder='la teste de scichicosa eut 
 enfin roule sur l echafaud.
-"vive ehrenfest", cria la foule.
+"vive ehrenfest", cria la foule.'>
 </textarea>
 
 ## <ruby>硬筆書体<rt class=s>juergen stylo</rt></ruby> <code>Juergen-Stylo</code>
 
-<textarea class=s cols="40" rows="5">
-la teste de scichicosa eut 
+<textarea class=s cols="40" rows="5" placeholder='la teste de scichicosa eut 
 enfin roule sur l echafaud.
-"vive ehrenfest", cria la foule.
+"vive ehrenfest", cria la foule.'>
 </textarea>
 
 ## <ruby>文字入力のコツ(一部独自見解)<rt class=s>unofficial transliteration tips</rt></ruby>
