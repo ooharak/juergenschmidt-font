@@ -444,7 +444,6 @@ beginjur("j", 7u#);
 	z8 = (0.5w, 0.5hh#);
 	z9 = (w-sx#, 0.5hh#);
 	draw z1--z2..controls z3..z4--z5..controls z6..z7..{right}z8--z9;
-
 endchar;
 
 beginjur("k", 7u#);
@@ -581,25 +580,25 @@ beginjur("s", 8u#);
 endchar;
 
 % ss
-beginjur(oct"001", 9u#);
-	penmonglyph(mg_t);
-	lft x1 = sx#;
-	lft x2 = w - sx#;
-	y1 = y2 = aheight * hh#;
-	draw z1--z2;
-	z4 = 0.67[z1,z2];
-	x44 = x5 - (x2-x3);
-	y44 = y4;
-	z3 = (.5(x4+x2), hh#);
-	bot z5 = (x4-.25(x2-x4), 0);
-	z6 = (x44-(x2-x3), hh#);
-	z7 = (x44-(x2-x4), y4);
-	%x6 = x7 = x1+0.2(x2-x1);
-	%y6 = .2hh#;
-	%y7 = hh#;
-	draw z2{up}..{left}z3..z4..{left}z5..{up}z44; %..{up}z6--z7;
-	draw z44{up}..{left}z6..z7;
-endchar;
+%beginjur(oct"001", 9u#);
+%	penmonglyph(mg_t);
+%	lft x1 = sx#;
+%	lft x2 = w - sx#;
+%	y1 = y2 = aheight * hh#;
+%	draw z1--z2;
+%	z4 = 0.67[z1,z2];
+%	x44 = x5 - (x2-x3);
+%	y44 = y4;
+%	z3 = (.5(x4+x2), hh#);
+%	bot z5 = (x4-.25(x2-x4), 0);
+%	z6 = (x44-(x2-x3), hh#);
+%	z7 = (x44-(x2-x4), y4);
+%	%x6 = x7 = x1+0.2(x2-x1);
+%	%y6 = .2hh#;
+%	%y7 = hh#;
+%	draw z2{up}..{left}z3..z4..{left}z5..{up}z44; %..{up}z6--z7;
+%	draw z44{up}..{left}z6..z7;
+%endchar;
 
 beginjur("t", 8u#);
 	penmonglyph(mg_t);
@@ -837,6 +836,133 @@ beginjur("$", 6u#);  % soil god
 		;
 endchar;
 
+
+
+beginjur(oct"001", 9u#);
+	penmonglyph(mg_t) ;
+	lft top z1 = (sx#, .8hh#);
+	lft top z10 = (sx#, .65hh#);
+	lft bot z2 = (sx#, 0);
+	top z3 = (.5w, .8hh#);
+	z4 = (.5w, .5hh#);
+	top z5 = (0.7(x3+x2), .8hh#);
+	top z6 = (0.5(x7+x5), hh#);
+	rt z7 = (w-sx#, .5hh#);
+	bot z8 = (x6, 0);
+	bot z9 = (0.5(x4+x5), .25hh#);
+	draw z1--z2..controls z10..z3--z4;
+	draw z5{up}..{right}z6..{down}z7..{left}z8..{up}z9;
+
+endchar;
+
+
+beginjur(oct"002", 8u#);
+	penmonglyph(mg_t);
+	lft x1 = sx#;
+	lft x2 = w - sx#;
+	y1 = y2 = aheight * hh#;
+	draw z1--z2;
+	top z3 = (.5(x1+x2), hh#);
+	% down
+	bot z4 = (x1, (1-aheight) * hh#);
+	bot z5 = (x3, 0);
+	z6 = (x2, y4);
+	draw z2{up}..{left}z3..{down}z1..{down}z4..{right}z5..{up}z6--z4;
+endchar;
+
+
+beginjur(oct"003", 8u#);
+	penmonglyph(mg_t);
+	top lft z1 = (sx#, hh#);
+	bot lft z2 = (sx#, 0);
+	bot z3 = (.7w-sx#, .05hh#);
+	top rt z4 = (w-sx#, hh#);
+	bot rt z5 = (w-sx#, 0);
+	draw z1{down}..controls z2..z3..{up}z4--z5;
+endchar;
+
+beginjur(oct"004", 7u#);
+	penmonglyph(mg_t);
+	lft top z1 = (sx# , hh#);
+	rt top z2 = (w, hh#);
+	top z3 = (sx# + 0.5(w-2sx#), y1);
+	z4 = (x3, 0.8hh#);
+	z5 = (x3, 0.2hh#);
+	z6 = (x3, 0);
+	z7 = (sx#, 0.25hh#);
+	z8 = (0.5w, 0.5hh#);
+	z9 = (w-sx#, 0.5hh#);
+	draw z1--z2..controls z3..z4--z5..controls z6..z7..{right}z8--z9;
+endchar;
+
+beginjur(oct"005", 3u#);
+	penmonglyph(mg_t);
+	top z1 = (sx#, hh#);
+	top z2 = (w-sx#, (1-.1) * hh#);
+	bot z3 = (sx#, .1 * hh#);
+	bot z4 = (w-sx#, 0);
+	draw z1--z2--z3--z4;
+endchar;
+
+beginjur(oct"006", 7u#);
+	penmonglyph(mg_t);
+	z1 = .5[z4,z5];
+	bot z2 = (.30w, 0);
+	lft z3 = (sx#, (y2+y4)/2);
+	top z4 = (x2, aheight * hh#);
+	bot z5 = (.7w, 0);
+	rt z6 = (w-sx#, y3);
+	z7 = (x5, y4);
+	draw z1--z2{left}..{up}z3..{right}z4..{right}z5..{up}z6..{left}z7;
+endchar;
+
+
+beginchar(oct"007", 7u#, 10pt#, 3pt#);
+	penmonglyph(mg_t);
+	top z1 = (0.5w, hh#);
+	top rt z2 = (w-sx#, hh#);
+	bot lft z3 = (0, 0);
+	bot z4 = (0.5w, 0);
+	bot z8 = (0.6(x4+x6), 0);
+	top rt z6 = (w-sx#, hh#);
+	bot rt z7 = (w-sx#, 0);
+	bot z11 = (x1, -d);
+	bot z22 = (x6, -d);
+	bot z33 = (w, 0);
+	draw z3{right}..controls z4..{up}z1--z11;
+	draw z11..controls z4 .. .5[z8,z4] .. controls z8 .. {up}z6--z22..controls z7..{right}z33;
+	%draw z11..controls z4 and z8..{up}z6--z22..controls z7..{right}z33;
+endchar;
+
+
+beginjur(hex"08", 9u#);
+	penmonglyph(mg_t);
+	top y1 = top y3 = top y5 = 0;
+	bot y2 = bot y4 = hh#;
+	x2-x1 = 1.3(x3-x2) = 1.3(x4-x3) = x5-x4 = (w-2sx#-2mg_t)/4;
+	x3 = .5w;
+	draw z1--z2--z3--z4--z5;
+	y6 = y7 = y8 = (1-aheight) * hh#;
+	x6 = sx#;
+	rt x7 = w - sx#;
+	x8 = .5w;
+	draw z6 ..controls z8.. z7;
+endchar;
+
+beginjur(hex"09", 7u#);
+	penmonglyph(mg_t) ;
+	top lft z1 = (sx#, hh#);
+	bot lft  z2 = (sx#, 0);
+	top rt z3 = (w - sx#, hh#);
+	top z4 = (.6(x1+x3), hh#);
+	z5 = (.5w, .5hh#);
+	z6 = (.5(x1+x4), .5*y5);
+	bot z7 = (x5, 0);
+	z8 = (x3, y6);
+	draw z1--z2..controls z1..z3;
+	draw z3{left}..z4..{down}z5{left}..{down}z6..{right}z7..{up}z8..{left}z5;
+endchar;
+
 ligtable "a": "l" kern -1.2u#, "m" kern -.6u#;
 ligtable "e": "m" kern -.6u#, "n" kern -1.2u#, skipto 1;
 ligtable "f": "e" kern -2u#;
@@ -853,7 +979,7 @@ ligtable "o":"p":"q":"r":
     "u" kern -.6u#,
     "v" kern -0.6u#;
 ligtable "m": "a" kern -1.5u#, "l" kern -1.2u#;
-ligtable "s": "s" =: oct"001";
+%ligtable "s": "s" =: oct"001";
 ligtable "v": "a" kern -2u#;
 end
 
