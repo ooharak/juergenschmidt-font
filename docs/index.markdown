@@ -17,7 +17,8 @@ PC上で表示できる、香月美夜先生の小説『本好きの下剋上』
 <ul>
 <li><a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v1.0">
 フォント置き場所はこちら。 (*.ttfファイル)</a></li>
-<li><a href="online.html">試し打ちできます(NEW!)</a></li>
+<li><a href="online.html">試し打ちできます</a></li>
+<li>2022.02.08: &#x1f195; ラテンアルファベットとの対応関係が不明な7文字を<a href="#untransliterated">追加しました。</a></li>
 </ul>
 
 
@@ -29,6 +30,7 @@ PC上で表示できる、香月美夜先生の小説『本好きの下剋上』
 * カーニング
 * 大神の記号
 * 句読点について
+* 対応関係不明文字について
 * 未対応の文字について
 
 それぞれの特徴について、以下で説明していきます。
@@ -38,7 +40,7 @@ PC上で表示できる、香月美夜先生の小説『本好きの下剋上』
 
 #### <ruby>写本書体<rt class=s>juergen manuscript</rt></ruby> <code>Juergen-Manuscript</code>
 
-<div class=mL>0123456789abcdefghijklmnopqrstuvwxyz,."!+&#x2a;$@#%</div>
+<div class=mL>0123456789abcdefghijklmnopqrstuvwxyz&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;,."!+&#x2a;$@#%</div>
 
 写本書体は、文字通り写本風を想像して製作した書体です。
 
@@ -60,7 +62,7 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 
 #### <ruby>硬筆書体<rt class=s>juergen stylo</rt></ruby> <code>Juergen-Stylo</code>
 
-<div class=sL>0123456789abcdefghijklmnopqrstuvwxyz,."!+&#x2a;$@#%</div>
+<div class=sL>0123456789abcdefghijklmnopqrstuvwxyz&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;,."!+&#x2a;$@#%</div>
 
 どちらかというとこちらのほうが、アニメなどで登場する字形により近いと思われます。
 硬筆書体という名前を当ててみましたが、フォント名はStylo (ペン) となっていて一定しません。感覚的に付けたものなので深い意味はありません。
@@ -112,11 +114,22 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 なお、疑問符や感嘆符は設けませんでした。もともと日本語にもないので、必須だとは思わなかったためです。このあたり、あくまでも私が勝手に妄想した設定であり、作者様の意図とは異なっているかもしれません。すみません。
 
 
+<a name=untransliterated></a>
+
+### 対応関係不明文字について
+
+
+有志まとめサイトには、ラテンアルファベットとの対応関係が不明なものとして、
+<span class=m>&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;</span>の７文字が挙げられています。
+これらは、いわゆる外字に相当する、UnicodeのPrivate Use Area `U+E000` ～ `U+E007`として追加してあります。
+入力方法は「Unicode 入力 方法」で検索するなどしてお調べください。
+
+
 ### 未対応の文字について
 
-本フォントでは、鈴華先生がデザインし直した基本文字のうち、対応関係が判明している0-9とa-zの文字に加え、香月先生考案の大神の記号、そして、恐縮ながら勝手に追加した句読点が含まれています。
+本フォントでは、鈴華先生がデザインし直した基本文字のうち、0-9とa-zの文字に加え、対応関係が不明な7文字、香月先生考案の大神の記号、そして、恐縮ながら勝手に追加した句読点が含まれています。
 
-一方、鈴華先生デザインの文字の中には、ラテンアルファベットの対応関係が不明な７文字があるほか、香月先生のお話によると、基本文字は35種類あり、そもそも仮名のように二系統の文字が存在するとのことです。これらは、残念ながら現在のところサポートするに至っておりません。
+一方、鈴華先生デザインの文字の中には、香月先生のお話によると、基本文字は35種類あり、そもそも仮名のように二系統の文字が存在するとのことです。これらは、残念ながら現在のところサポートするに至っておりません。
 
 ## <ruby>使い方<rt class=m>usage</rt></ruby>
 
