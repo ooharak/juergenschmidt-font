@@ -15,7 +15,7 @@ PC上で表示できる、香月美夜先生の小説『本好きの下剋上』
 個人的興味を満たす目的で作成したものなので、本フォントについて作者様、出版社等へのお問い合わせはご遠慮ください。
 
 <ul>
-<li><a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v1.0">
+<li><a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v1.1">
 フォント置き場所はこちら。 (*.ttfファイル)</a></li>
 <li><a href="online.html">試し打ちできます</a></li>
 <li>2022.02.08: &#x1f195; ラテンアルファベットとの対応関係が不明な9文字を<a href="#untransliterated">追加しました。</a></li>
