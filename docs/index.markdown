@@ -121,7 +121,7 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 
 有志まとめサイトには、ラテンアルファベットとの対応関係が不明なものとして、
 <span class=m>&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;</span>の9文字が挙げられています。
-これらは、いわゆる外字に相当する、UnicodeのPrivate Use Area `U+E000` ～ `U+E007`として追加してあります。
+これらは、いわゆる外字に相当する、UnicodeのPrivate Use Area `U+E000` ～ `U+E008`として追加してあります。
 入力方法は「Unicode 入力 方法」で検索するなどしてお調べください。
 
 
