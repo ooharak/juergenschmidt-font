@@ -4,6 +4,8 @@ title: Jürgenschmidt font
 bodyclass: multicolumn
 ---
 
+<div style="text-align:right;"><a href="english.html">English</a></div>
+
 # ユルゲンシュミット 基本文字フォント<br><js>juergenschmidt</js><br><jm>basic script font</jm>
 
 

@@ -28,7 +28,7 @@ h3 { font-size: 18pt; margin-top: 30pt; }
 h4 { font-size: 16pt; }
 table { width: 450px; }
 body { 
-  font-family: Hannari, serif;
+  font-family: "Palatino Linotype", "Times New Roman", Hannari, serif;
   font-size: 14pt;
   line-break: strict;
   background-image: url('../images/paperpattern.png');
@@ -39,8 +39,15 @@ body {
   column-gap: 24px;
   column-rule: 1px solid black;
 }
+textarea::placeholder {
+  color: rgba(0,0,0,.3);
+}
 textarea {
   width: 80%;
+  font-size: 14pt;
+  color: black;
+  background-color: #e0c9a6;
+  border: 4px outset gray;
 }
 body > * { 
   margin-left: 20pt; 
@@ -55,4 +62,10 @@ td span { work-break; break-all; }
 	display: block;
 	position: absolute; left: 20px; top: 100px; opacity: 0.7;
 	contain: layout;
+}
+
+.alert {
+  width: 80%;
+  background-color: pink;
+  border-radius: 10px;
 }
