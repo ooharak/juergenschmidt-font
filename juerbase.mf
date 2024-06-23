@@ -364,9 +364,13 @@ beginchar(ch, 6u#, 10pt#, 3pt#);
 	lft z4 = (sx#, .4hh#);
 	draw z4--z1--z3;
 
-	bot z6 = (x2, -.5d);
+	
+	%bot z6 = (x2, -.5d);
+	bot z6 = (x2, 0);
 	lft bot z5 = (sx#, -.5d);
-	draw z2..controls z6..z5;
+	%draw z2..controls z6..z5;
+	draw reverse z2..controls z6..z5;
+
 endchar
 enddef;
 GLYPH_UPPER_E("E");
@@ -433,6 +437,7 @@ GLYPH_UPPER_H("H");
 def GLYPH_UPPER_I(expr ch) =
 beginjur(ch, 3u#);
 	penmonglyph(mg_t);
+	numeric dx, dy, xL, xR;
 	dx = .1;
 	dy = .1;
 	%xL = (0.5-dx) * w;
@@ -490,11 +495,11 @@ beginjur(ch, 7u#);
 	top z1 = (0.5w, hh#);
 	top rt z2 = (w-sx#, hh#);
 	bot lft z3 = (0, 0);
-	bot z4 = (0.5w, 0);
-	bot z8 = (0.6(x4+x6), 0);
+	bot z4 = (0.45w, .05hh#);
+	bot z8 = (0.6(x4+x6), .04hh#);
 	top rt z6 = (w-sx#, hh#);
 	bot rt z7 = (w-sx#, 0);
-	draw z3{right}..controls z4..{up}z1;
+	draw reverse z3{right}..controls z4..{up}z1;
 	draw z3--z4{right}..controls z8..{up}z6;
 	draw z6{down}..controls z8..{right}z7;
 endchar
@@ -644,8 +649,8 @@ beginjur(ch, 8u#);
 	bot y1 = bot y4 = 0;
 	y2 = y3 = hh#;
 	lft x1 = lft x2 = sx#+.1w;
-	z22 = z2 + (.2w, 0);
-	z33 = z3 - (.2w, 0);
+	z22 = z2 + (.2w, .01hh#);
+	z33 = z3 - (.2w, -.01hh#);
 	rt x3 = rt x4 = w - sx# - .1w;
 	draw z1{up}..controls z2..z22--z33..controls z3..{down}z4;
 	bot y5 = bot y6 = .2hh#;
@@ -814,7 +819,8 @@ beginchar("e", 6u# * lx, 10pt#, 3pt#);
 	lft z4 = (sx#, .4hh# * ly);
 	draw z1--z3;
 
-	bot z6 = (x2, -.5d * ly);
+	%bot z6 = (x2, -.5d * ly);
+	bot z6 = (x2, 0);
 	lft bot z5 = (sx#, -.5d * ly);
 	draw z2..controls z6..z5;
 endchar;
@@ -877,10 +883,11 @@ endchar;
 
 beginjur("i", 3u# * lx);
 	penmonglyph(mg_t);
-	%dx = .1;
-	%dy = .1;
-	%xL = (0.5-dx) * w;
-	%xR = (0.5+dx) * w;
+	numeric dx, dy, xL, xR;
+	dx = .3;
+	dy = .1;
+	xL = (0.5-dx) * w;
+	xR = (0.5+dx) * w;
 	%xL = sx#;
 	%xR = w - sx#;
 	top z1 = (xL, hh# * ly);
@@ -1082,7 +1089,7 @@ beginjur("v", 7u# * lx);
 	penmonglyph(mg_t);
 	lft x1 = sx#;
 	rt x3 = .75w-sx#;
-	bot y1 = bot y3 = 0;
+	bot y1 = bot y3 - .01hh# = 0;
 	top z2 = (.5(x1+x3), hh# * ly);
 
 	rt bot z4 = (w - sx#, 0);
@@ -1090,47 +1097,46 @@ beginjur("v", 7u# * lx);
 	draw z1--z2..controls z3..z4;
 endchar;
 
-beginjur("w", 8u#);
+beginjur("w", 8u# * lx);
 	penmonglyph(mg_t);
-	top y1 = top y2 = top y3 = hh#;
-	bot y4 = bot y5 = bot y6 = 0;
-	lft x1 = lft x4 = sx#;
+	top z1 = (.2w+sx#, hh# * ly);
+	bot z3 = (.2w+sx#, 0 );
+	lft z2 = (sx#, .5hh# * ly);
+	rt z4 = (.4w+sx#, .5hh# * ly);
+	draw z1...z2...z3...z4...cycle;
+
+	top y8 = hh# * ly;
+	bot y9 = 0;
+	rt x8 = rt x9 = .9w-sx#;
+	draw z8--z9;
+
+endchar;
+
+beginjur("x", 6u# * lx);
+	penmonglyph(mg_t);
+	draw (sx#,hh# * ly)...(.5w, .6hh# * ly)..(w-sx#,hh# * ly);
+	draw (sx#,  0)..(.5w, .4hh# * ly)...(w-sx#,0);
+endchar;
+
+
+beginjur("y", 8u# * lx);
+	penmonglyph(mg_t);
+	top y1 = top y2 = top y3 = hh# * ly;
+	bot y4 = bot y5 = bot y6 = .1hh# * ly;
+	lft x1 = lft x4 - sx#   = 1.5sx#;
 	x2 = x5 = .5w;
-	rt x3 = rt x6 = w-sx#;
-	lft z91 = (x1, .5hh#);
-	z92 = (.5(x1+x2), .5(y91+y1));
-	draw z91..z92..z1--z4--z6--z3;
+	rt x3 - .1w = rt x6 +.2w  = w-sx# - .1w;
+	draw z1...z4...z6...z3;
 	draw z2--z5;
 endchar;
 
-beginjur("x", 6u#);
+beginjur("z", 8u# * lx);
 	penmonglyph(mg_t);
-	draw (sx#,hh#)...(.5w, .6hh#)..(w-sx#,hh#);
-	draw (sx#,  0)..(.5w, .4hh#)...(w-sx#,0);
-endchar;
-
-
-beginjur("y", 8u#);
-	penmonglyph(mg_t);
-	top y1 = top y2 = top y3 = hh#;
-	bot y4 = bot y5 = bot y6 = 0;
-	lft x1 = lft x4 = sx#;
-	x2 = x5 = .5w;
-	rt x3 = rt x6 = w-sx#;
-	draw z1--z4--z6--z3;
-	draw z2--z5;
-endchar;
-
-beginjur("z", 8u#);
-	penmonglyph(mg_t);
-	rt z1 = (sx#+.9(w-2sx#), hh#);
+	rt z1 = (sx#+.9(w-2sx#), hh# * ly);
 	lft z2 = (sx#, y1);
 	rt z3 = (sx#+.9(w-2sx#), 0);
 	rt z4 = (x2, y3);
 	draw z1--z2--z3--z4;
-	z5 = (sx#, .5hh#);
-	z6 = (w-sx#, .5hh#);
-	draw z5--z6;
 endchar;
 
 %% BEGIN_PUNCT
@@ -1300,7 +1306,8 @@ endchar;
 
 %% BEGIN_NON_ASCII_UPPER
 %
-beginjur(oct"001", 9u#);
+def GLYPH_UPPER_EXT_ZERO(expr ch) =
+beginjur(ch, 9u#);
 	penmonglyph(mg_t) ;
 	lft top z1 = (sx#, .8hh#);
 	lft top z10 = (sx#, .65hh#);
@@ -1314,11 +1321,167 @@ beginjur(oct"001", 9u#);
 	bot z9 = (0.5(x4+x5), .25hh#);
 	draw z1--z2..controls z10..z3--z4;
 	draw z5{up}..{right}z6..{down}z7..{left}z8..{up}z9;
+endchar
+enddef;
+GLYPH_UPPER_EXT_ZERO(hex"c0");
 
+def GLYPH_UPPER_EXT_ONE(expr ch) =
+beginjur(ch, 8u#);
+	penmonglyph(mg_t);
+	lft x1 = sx#;
+	lft x2 = w - sx#;
+	y1 = y2 = aheight * hh#;
+	draw z1--z2;
+	top z3 = (.5(x1+x2), hh#);
+	% down
+	bot z4 = (x1, (1-aheight) * hh#);
+	bot z5 = (x3, 0);
+	z6 = (x2, y4);
+	draw z2{up}..{left}z3..{down}z1..{down}z4..{right}z5..{up}z6--z4;
+endchar
+enddef;
+GLYPH_UPPER_EXT_ONE(hex"c1");
+
+def GLYPH_UPPER_EXT_TWO(expr ch) =
+beginjur(ch, 8u#);
+	penmonglyph(mg_t);
+	top lft z1 = (sx#, hh#);
+	bot lft z2 = (sx#, .1hh#);
+	bot z3 = (.7w-sx#, 0);
+	top rt z4 = (w-sx#, hh#);
+	bot rt z5 = (w-sx#, 0);
+	draw z1{down}..controls z2..z3...{up}z4--z5;
+endchar
+enddef;
+GLYPH_UPPER_EXT_TWO(hex"c2");
+
+def GLYPH_UPPER_EXT_THREE(expr ch) =
+beginjur(ch, 7u#);
+	penmonglyph(mg_t);
+	lft top z1 = (sx# , hh#);
+	rt top z2 = (w, hh#);
+	top z3 = (sx# + 0.5(w-2sx#), y1);
+	z4 = (x3, 0.8hh#);
+	z5 = (x3, 0.2hh#);
+	z6 = (x3, 0);
+	z7 = (sx#, 0.25hh#);
+	z8 = (0.5w, 0.5hh#);
+	z9 = (w-sx#, 0.5hh#);
+	draw z1--z2..controls z3..z4--z5..controls z6..z7..{right}z8--z9;
+endchar
+enddef;
+GLYPH_UPPER_EXT_THREE(hex"c3");
+
+
+def GLYPH_UPPER_EXT_FOUR(expr ch) =
+beginjur(ch, 3u#);
+	penmonglyph(mg_t);
+	top z1 = (sx#, hh#);
+	top z2 = (w-sx#, (1-.1) * hh#);
+	bot z3 = (sx#, .1 * hh#);
+	bot z4 = (w-sx#, 0);
+	draw z1--z2--z3--z4;
+endchar
+enddef;
+GLYPH_UPPER_EXT_FOUR(hex"c4");
+
+
+def GLYPH_UPPER_EXT_FIVE(expr ch) =
+beginjur(ch, 7u#);
+	penmonglyph(mg_t);
+	z1 = .5[z4,z5];
+	bot z2 = (.30w, 0);
+	lft z3 = (sx#, (y2+y4)/2);
+	top z4 = (x2, aheight * hh#);
+	bot z5 = (.7w, 0);
+	rt z6 = (w-sx#, y3);
+	z7 = (x5, y4);
+	draw z1--z2{left}..{up}z3..{right}z4..{right}z5..{up}z6..{left}z7;
+endchar
+enddef;
+GLYPH_UPPER_EXT_FIVE(hex"c5");
+
+
+def GLYPH_UPPER_EXT_SIX(expr ch) =
+beginchar(ch, 7u#, 10pt#, 3pt#);
+	penmonglyph(mg_t);
+	top z1 = (0.5w, hh#);
+	top rt z2 = (w-sx#, hh#);
+	bot lft z3 = (0, 0);
+	bot z4 = (0.5w, 0);
+	bot z8 = (0.6(x4+x6), 0);
+	top rt z6 = (w-sx#, hh#);
+	bot rt z7 = (w-sx#, 0);
+	bot z11 = (x1, -d);
+	bot z22 = (x6, -d);
+	bot z33 = (w, 0);
+	draw z3{right}..controls z4..{up}z1--z11;
+	draw z11..controls z4 .. .5[z8,z4] .. controls z8 .. {up}z6--z22..controls z7..{right}z33;
+	%draw z11..controls z4 and z8..{up}z6--z22..controls z7..{right}z33;
+endchar
+enddef;
+GLYPH_UPPER_EXT_SIX(hex"c6");
+
+
+def GLYPH_UPPER_EXT_SEVEN(expr ch) =
+beginjur(ch, 9u#);
+	penmonglyph(mg_t);
+	top y1 = top y3 = top y5 = 0;
+	bot y2 = bot y4 = hh#;
+	x2-x1 = 1.3(x3-x2) = 1.3(x4-x3) = x5-x4 = (w-2sx#-2mg_t)/4;
+	x3 = .5w;
+	draw z1--z2--z3--z4--z5;
+	y6 = y7 = y8 = (1-aheight) * hh#;
+	x6 = sx#;
+	rt x7 = w - sx#;
+	x8 = .5w;
+	draw z6 ..controls z8.. z7;
+endchar
+enddef;
+GLYPH_UPPER_EXT_SEVEN(hex"c7");
+
+
+def GLYPH_UPPER_EXT_EIGHT(expr ch) =
+beginjur(ch, 7u#);
+	penmonglyph(mg_t) ;
+	top lft z1 = (sx#, hh#);
+	bot lft  z2 = (sx#, 0);
+	top rt z3 = (w - sx#, hh#);
+	top z4 = (.6(x1+x3), hh#);
+	z5 = (.5w, .5hh#);
+	z6 = (.5(x1+x4), .5*y5);
+	bot z7 = (x5, 0);
+	z8 = (x3, y6);
+	draw z1--z2..controls z1..z3;
+	draw z3{left}..z4..{down}z5{left}..{down}z6..{right}z7..{up}z8..{left}z5;
+endchar
+enddef;
+GLYPH_UPPER_EXT_EIGHT(hex"c8");
+
+%% BEGIN_NON_ASCII_LOWER
+%
+beginjur(hex"d0", 9u# * lx);
+	penmonglyph(mg_t) ;
+	lft top z1 = (sx#, .8hh# * ly);
+	lft top z10 = (sx#, .65hh# * ly);
+	lft bot z2 = (sx#, 0);
+	top z3 = (.5w, .8hh# * ly);
+	z4 = (.5w, .5hh# * ly);
+	top z5 = (0.7(x3+x2), .55hh# * ly); %
+	top z6 = (0.5(x7+x5), hh# * ly);
+	rt z7 = (w-sx#, .5hh# * ly);
+	bot z8 = (x6, 0);
+	bot z9 = (0.5(x4+x5), .25hh# * ly);
+	%draw z1--z2..controls z10..z3--z4;
+	top z11 = (.3w, .6hh# * ly);
+	top z12 = (.6w, .5hh# * ly);
+	draw z11--z12;
+	rt z13 = (w-sx#, 0);
+	draw z5{up}..{right}z6..{down}z7--z13; %..{left}z8..{up}z9;
 endchar;
 
 
-beginjur(oct"002", 8u#);
+beginjur(hex"d1", 8u# * lx);
 	penmonglyph(mg_t);
 	lft x1 = sx#;
 	lft x2 = w - sx#;
@@ -1333,17 +1496,18 @@ beginjur(oct"002", 8u#);
 endchar;
 
 
-beginjur(oct"003", 8u#);
+beginjur(hex"d2", 8u# * lx);
 	penmonglyph(mg_t);
 	top lft z1 = (sx#, hh#);
-	bot lft z2 = (sx#, 0);
-	bot z3 = (.7w-sx#, .05hh#);
+	bot lft z2 = (sx#, .1hh#);
+	bot z3 = (.7w-sx#, 0);
 	top rt z4 = (w-sx#, hh#);
 	bot rt z5 = (w-sx#, 0);
-	draw z1{down}..controls z2..z3..{up}z4--z5;
+	draw z1{down}..controls z2..z3...{up}z4--z5;
 endchar;
 
-beginjur(oct"004", 7u#);
+
+beginjur(hex"d3", 7u# * lx);
 	penmonglyph(mg_t);
 	lft top z1 = (sx# , hh#);
 	rt top z2 = (w, hh#);
@@ -1357,7 +1521,8 @@ beginjur(oct"004", 7u#);
 	draw z1--z2..controls z3..z4--z5..controls z6..z7..{right}z8--z9;
 endchar;
 
-beginjur(oct"005", 3u#);
+
+beginjur(hex"d4", 3u# * lx);
 	penmonglyph(mg_t);
 	top z1 = (sx#, hh#);
 	top z2 = (w-sx#, (1-.1) * hh#);
@@ -1366,7 +1531,8 @@ beginjur(oct"005", 3u#);
 	draw z1--z2--z3--z4;
 endchar;
 
-beginjur(oct"006", 7u#);
+
+beginjur(hex"d5", 7u# * lx);
 	penmonglyph(mg_t);
 	z1 = .5[z4,z5];
 	bot z2 = (.30w, 0);
@@ -1379,7 +1545,7 @@ beginjur(oct"006", 7u#);
 endchar;
 
 
-beginchar(oct"007", 7u#, 10pt#, 3pt#);
+beginchar(hex"d6", 7u# * lx, 10pt#, 3pt#);
 	penmonglyph(mg_t);
 	top z1 = (0.5w, hh#);
 	top rt z2 = (w-sx#, hh#);
@@ -1397,7 +1563,7 @@ beginchar(oct"007", 7u#, 10pt#, 3pt#);
 endchar;
 
 
-beginjur(hex"08", 9u#);
+beginjur(hex"d7", 9u# * lx);
 	penmonglyph(mg_t);
 	top y1 = top y3 = top y5 = 0;
 	bot y2 = bot y4 = hh#;
@@ -1411,7 +1577,8 @@ beginjur(hex"08", 9u#);
 	draw z6 ..controls z8.. z7;
 endchar;
 
-beginjur(hex"09", 7u#);
+
+beginjur(hex"d8", 7u# * lx);
 	penmonglyph(mg_t) ;
 	top lft z1 = (sx#, hh#);
 	bot lft  z2 = (sx#, 0);
@@ -1425,12 +1592,38 @@ beginjur(hex"09", 7u#);
 	draw z3{left}..z4..{down}z5{left}..{down}z6..{right}z7..{up}z8..{left}z5;
 endchar;
 
-ligtable "a": "l" kern -1.2u#, "m" kern -.6u#;
-ligtable "e": "m" kern -.6u#, "n" kern -1.2u#, skipto 1;
-ligtable "f": "e" kern -2u#;
-ligtable "t": "e" kern -4u#, "a" kern -2u#, "m" kern -2u#, skipto 1;
-ligtable "o":"p":"q":"r":
-1::
+
+%% Ligature table
+if not known has_minuscule:
+	boolean has_minuscule;
+	has_minuscule := false;
+fi;
+
+if has_minuscule:
+  % when lower case has different glyph set then upper case
+  ligtable "A":
+  	"L" kern -1.2u#, "M" kern -.6u#,
+  	"l" kern -1.2u#, "m" kern -.6u#;
+  ligtable "E":
+  	"M" kern -.6u#, "N" kern -1.2u#,
+  	"m" kern -.6u#, "n" kern -1.2u#, skipto 1;
+  ligtable "F":
+  	"E" kern -2u#,
+  	"e" kern -2u#;
+  ligtable "T":
+  	"E" kern -4u#, "A" kern -2u#, "M" kern -2u#, 
+  	"e" kern -4u#, "a" kern -2u#, "m" kern -2u#, skipto 1;
+  ligtable "O":"P":"Q":"R":
+  1::
+    "H" kern -.6u#,
+    "I" kern -.6u#,
+    "L" kern -.6u#,
+    "O" kern -.6u#,
+    "Q" kern -.6u#,
+    "R" kern -.6u#,
+    "S" kern -.6u#,
+    "U" kern -.6u#,
+    "V" kern -0.6u#,
     "h" kern -.6u#,
     "i" kern -.6u#,
     "l" kern -.6u#,
@@ -1440,7 +1633,87 @@ ligtable "o":"p":"q":"r":
     "s" kern -.6u#,
     "u" kern -.6u#,
     "v" kern -0.6u#;
-ligtable "m": "a" kern -1.5u#, "l" kern -1.2u#;
-%ligtable "s": "s" =: oct"001";
-ligtable "v": "a" kern -2u#;
+  ligtable "M":
+  	"A" kern -1.5u#, "L" kern -1.2u#,
+  	"a" kern -1.5u#, "l" kern -1.2u#;
+  ligtable "V":
+  	"A" kern -2u#,
+  	"a" kern -2u#;
+else:
+  % when upper case and lower case share the same glyph set
+  GLYPH_UPPER_A("a");
+  GLYPH_UPPER_B("b");
+  GLYPH_UPPER_C("c");
+  GLYPH_UPPER_D("d");
+  GLYPH_UPPER_E("e");
+  GLYPH_UPPER_F("f");
+  GLYPH_UPPER_G("g");
+  GLYPH_UPPER_H("h");
+  GLYPH_UPPER_I("i");
+  GLYPH_UPPER_J("j");
+  GLYPH_UPPER_K("k");
+  GLYPH_UPPER_L("l");
+  GLYPH_UPPER_M("m");
+  GLYPH_UPPER_N("n");
+  GLYPH_UPPER_O("o");
+  GLYPH_UPPER_P("p");
+  GLYPH_UPPER_Q("q");
+  GLYPH_UPPER_R("r");
+  GLYPH_UPPER_S("s");
+  GLYPH_UPPER_T("t");
+  GLYPH_UPPER_U("u");
+  GLYPH_UPPER_V("v");
+  GLYPH_UPPER_W("w");
+  GLYPH_UPPER_X("x");
+  GLYPH_UPPER_Y("y");
+  GLYPH_UPPER_Z("z");
+  GLYPH_UPPER_EXT_ZERO(hex"d0");
+  GLYPH_UPPER_EXT_ONE(hex"d1");
+  GLYPH_UPPER_EXT_TWO(hex"d2");
+  GLYPH_UPPER_EXT_THREE(hex"d3");
+  GLYPH_UPPER_EXT_FOUR(hex"d4");
+  GLYPH_UPPER_EXT_FIVE(hex"d5");
+  GLYPH_UPPER_EXT_SIX(hex"d6");
+  GLYPH_UPPER_EXT_SEVEN(hex"d7");
+  GLYPH_UPPER_EXT_EIGHT(hex"d8");
+  ligtable "A": "L" kern -1.2u#, "M" kern -.6u#;
+  ligtable "E": "M" kern -.6u#, "N" kern -1.2u#, skipto 2;
+  ligtable "F": "E" kern -2u#;
+  ligtable "T": "E" kern -4u#, "A" kern -2u#, "M" kern -2u#, skipto 2;
+  ligtable "O":"P":"Q":"R":
+  2::
+    "H" kern -.6u#,
+    "I" kern -.6u#,
+    "L" kern -.6u#,
+    "O" kern -.6u#,
+    "Q" kern -.6u#,
+    "R" kern -.6u#,
+    "S" kern -.6u#,
+    "U" kern -.6u#,
+    "V" kern -0.6u#;
+  ligtable "M": "A" kern -1.5u#, "L" kern -1.2u#;
+  ligtable "V": "A" kern -2u#;
+  ligtable "a": "l" kern -1.2u#, "m" kern -.6u#;
+  ligtable "e": "m" kern -.6u#, "n" kern -1.2u#, skipto 2;
+  ligtable "f": "e" kern -2u#;
+  ligtable "t": "e" kern -4u#, "a" kern -2u#, "m" kern -2u#, skipto 2;
+  ligtable "o":"p":"q":"r":
+  2::
+    "h" kern -.6u#,
+    "i" kern -.6u#,
+    "l" kern -.6u#,
+    "o" kern -.6u#,
+    "q" kern -.6u#,
+    "r" kern -.6u#,
+    "s" kern -.6u#,
+    "u" kern -.6u#,
+    "v" kern -0.6u#;
+  ligtable "m": "a" kern -1.5u#, "l" kern -1.2u#;
+  ligtable "v": "a" kern -2u#;
+fi;
+
+%The below does not work IDK why
+%if known ps_output:
+%font_coding_scheme "t1";
+%fi;
 
