@@ -1501,11 +1501,11 @@ endchar;
 beginjur(hex"d2", 8u# * lx);
 	penmonglyph(mg_t);
 	top lft z1 = (sx#, hh# * ly);
-	bot lft z2 = (sx#, .1hh# * ly);
-	bot z3 = (.7w-sx#, 0);
-	top rt z4 = (w-sx#, hh# * ly);
+	bot lft z2 = (.01w + sx#, 0);
+	bot z3 = (.6w-sx#, 0);
+	top rt z4 = (.99w-sx#, hh# * ly);
 	bot rt z5 = (w-sx#, 0);
-	draw z1{down}..controls z2..z3...{up}z4--z5;
+	draw z1{down}..controls z2..{right}z3..{up}z4--z5;
 endchar;
 
 
@@ -1560,8 +1560,9 @@ beginchar(hex"d6", 7u# * lx, 10pt#, 3pt#);
 	bot z33 = (w, 0);
 	%draw z3{right}..controls z4..{up}z1--z11;
 	%draw z11..controls z4 .. .5[z8,z4] .. controls z8 .. {up}z6--z22..controls z7..{right}z33;
-	draw z3{right}..controls z4..{up}z1
-		..controls z4 .. .5[z8,z4] .. controls z8 .. {up}z6..controls z7..{right}z33;
+	%draw z3{right}..controls z4..{up}z1
+	%	..controls z4 .. .5[z8,z4] .. controls z8 .. {up}z6..controls z7..{right}z33;
+	draw z3{right}..{up}z1{down}.. {right}z8 ... {up}z6{down}..{right}z33;
 	lft z50 = (sx#, .5hh# * ly);
 	rt z51 = (w, y50);
 	draw z50--z51;
