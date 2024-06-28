@@ -24,3 +24,7 @@ juergen-manu-min.otf
 juergen-stylo.otf
 juergen-stylo-min.otf
 ```
+
+## Doc
+
+Read [this][https://stackoverflow.com/questions/66113639/jekyll-serve-throws-no-implicit-conversion-of-hash-into-integer-error) for doc generation error.
