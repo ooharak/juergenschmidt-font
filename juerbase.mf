@@ -871,9 +871,9 @@ endchar;
 
 
 
-beginjur("h", 7u# * lx);
+beginjur("h", 5u# * lx);
 	penmonglyph(mg_t) ;
-	top lft z1 = (sx#+.2w, hh# * ly);
+	top lft z1 = (sx#, hh# * ly);
 	top z2 = (.5w, hh# * ly);
 	top rt z3 = (w-sx#, hh# * ly);
 	lft z4 = (sx#, .6hh# * ly);

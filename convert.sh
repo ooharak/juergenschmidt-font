@@ -51,5 +51,5 @@ EOF
 dir="$(realpath $(dirname $0))"
 do_convert "${dir}/stylo-min.pfb" "${dir}/juergen-stylo-min.otf" "Juergen-Stylo-Minuscule"
 do_convert "${dir}/manu-min.pfb" "${dir}/juergen-manu-min.otf" "Juergen-Manuscript-Minuscule"
-do_convert "${dir}/stylo.pfb" "${dir}/juergen-stylo.otf" "Juergenschmidt-Stylo"
-do_convert "${dir}/manu.pfb" "${dir}/juergen-manu.otf" "Juergenschmidt-Manuscript"
+do_convert "${dir}/stylo.pfb" "${dir}/juergen-stylo.otf" "Juergen-Stylo"
+do_convert "${dir}/manu.pfb" "${dir}/juergen-manu.otf" "Juergen-Manuscript"
