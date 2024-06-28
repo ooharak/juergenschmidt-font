@@ -18,6 +18,21 @@ endchar;
 
 % BEGIN_NUMERIC 
 %
+beginjur("0", num_width);
+        penmonglyph(mg_t) ;
+        bot z1 = (0.5w, 0);
+        rt z2 = (w - sx#/2, 0.5hh#);
+        top z3 = (0.5w, hh#);
+        lft z4 = (sx#, 0.5hh#);
+        %draw z1..z2..z3..z4..cycle;
+        penpos1(mg_t, -30);
+        penpos2(mg_t, 30);
+        penpos3(mg_t, 120);
+        penpos4(mg_t, 170);
+        penstroke z1e..z2e..z3e..z4e..cycle;
+        penlabels(1,2,3,4);
+endchar;
+
 beginjur("1", num_width);
 	penmonglyph(mg_t) ;
 	top lft z1 = (sx#/2, hh#);
