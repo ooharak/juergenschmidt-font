@@ -1,18 +1,26 @@
 # Jürgenschmidt-font : _Ascendance of a Bookworm_ unofficial font
 
+## Input
+
+* `juerbase.mf`: base glyphs
+  * `_manu.mf`: manuscript common (depends on `juerbase.mf`)
+    * `manu.mf`: Juergenschmidt-Manuscript (depends on `_manu.mf`)
+    * `manu-min.mf`: Juergen-Manuscript-Minuscule (depends on `_manu.mf`)
+  * `_stylo.mf`: stylo common (depends on `juerbase.mf`)
+    * `stylo.mf`: Juergenschmidt-Stylo (depends on `_stylo.mf`)
+    * `stylo-min.mf`: Juergen-Stylo-Minuscule (depends on `_stylo.mf`)
+
 ## Build
 
 ```
+./build.sh
+```
 
-for name in stylo manu stylo-min manu-min; do
-  mf2pt1 --encoding=t1 ${name}.mf
-done
+## Output
 
-fontforge stylo.pfb
-# On fontforge:
-# - File-> Execute Script...
-#     Execute map-to-unicode.pe # This will map special characters to respective Unicode PUA codepoints.
-# //  - Merge *.tfm.   # <--- IGNORE THIS LINE
-# - Generate TrueType .
-
+```
+juergen-manu.otf
+juergen-manu-min.otf
+juergen-stylo.otf
+juergen-stylo-min.otf
 ```
