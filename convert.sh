@@ -6,6 +6,7 @@ do_convert() {
   fontname="$3"
 fontforge -quiet -lang=ff -script /dev/stdin <<EOF
 Open("${infile}");
+MergeFeature("${infile%.*}.tfm")
 Select(0xc0);
 SetUnicodeValue(0xE000);
 Select(0xc1);
