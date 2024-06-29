@@ -1,0 +1,11 @@
+% SPDX-License-Identifier: UNLICENSED
+
+boolean has_minuscule;
+has_minuscule := true;
+
+input _stylo;
+font_identifier := "Juergen-Stylo-Min";
+
+
+end
+

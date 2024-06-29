@@ -1,0 +1,26 @@
+% SPDX-License-Identifier: UNLICENSED
+
+mode_setup;
+%font_identifier := "Juergen-Stylo";
+font_size 10pt#;
+u# = 1.4pt#;
+sx# = 1pt;
+hh# = 10pt - 1.5pt;
+font_normal_space 0.5pt; % no stretching or shrinking
+font_quad 10pt;
+font_extra_space 0.5pt;
+
+mg_t := 0.7pt;
+
+def penmonglyph(expr si) =
+	pickup pensquare xscaled si yscaled .3si
+enddef;
+
+
+def penstroke text t =
+        forsuffixes e = l,r: path_.e := t; endfor;
+        draw path_.l
+enddef;
+
+input juerbase;
+
