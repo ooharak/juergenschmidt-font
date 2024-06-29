@@ -6,7 +6,7 @@ bodyclass: multicolumn
 
 <div style="text-align:right;"><a href="english.html">English</a></div>
 
-# ユルゲンシュミット 基本文字フォント<br><js>juergenschmidt</js><br><jm>basic script font</jm>
+# ユルゲンシュミット 基本文字フォント<br><js>juergenschmidt</js><br><jmMINU>Basic Script Font</jmMINU>
 
 
 PC上で表示できる、香月美夜先生の小説『本好きの下剋上』に登場する基本文字のフォントです。<br>
@@ -14,21 +14,34 @@ PC上で表示できる、香月美夜先生の小説『本好きの下剋上』
 
 このページではこのフォントの成り立ちについて説明しています。
 
-個人的興味を満たす目的で作成したものなので、本フォントについて作者様、出版社等へのお問い合わせはご遠慮ください。
+<div class="alert">
+
+このフォントはファンによる製作です。原著作者・権利者各位の定める方針に従い、自己責任でお楽しみください。
+(参考:TOブックス. "【注意喚起】個人でのグッズ制作につきまして". <a href="https://www.tobooks.jp/info_220603.html">https://www.tobooks.jp/info_220603.html</a>, (参照 2024-06-29).)
+
+<br/>
+本フォント製作者は、あなたがフォントを使用したことによって生じうる問題については責任を負いません。
+また、本フォントについて作者様、出版社等へのお問い合わせはご遠慮ください。
+
+</div>
+
+
 
 <ul>
-<li><a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v1.1">
+<li><a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v2.0">
 フォント置き場所はこちら。 (*.ttfファイル)</a></li>
 <li><a href="online.html">試し打ちできます</a></li>
-<li>2022.02.08: &#x1f195; ラテンアルファベットとの対応関係が不明な9文字を<a href="#untransliterated">追加しました。</a></li>
+<li><strong>2024.06.29: &#x1f195; <a href="#minuscule">ご要望のあった小字体(Minuscule)を追加しました。</a></strong></li>
+<li>2022.02.08: ラテンアルファベットとの対応関係が不明な9文字を追加しました。</li>
 </ul>
 
 
-以下、書籍風に組んでみたかったので、PCなどで表示させると、いちいち下にスクロールしてから上に戻らないといけなくて読みづらいですが、ご勘弁ください。
+以下、書籍風に組んでみたかったので、PCなどで表示させると、いちいち下にスクロールしてから上に戻らないといけなくて読みづらいですが、ご容赦ください。
 
 ## <ruby>特徴 <rt class=m>features</rt></ruby>
 
 * 2書体
+* 大字体・小字体をサポート
 * カーニング
 * 大神の記号
 * 句読点について
@@ -42,7 +55,7 @@ PC上で表示できる、香月美夜先生の小説『本好きの下剋上』
 
 #### <ruby>写本書体<rt class=s>juergen manuscript</rt></ruby> <code>Juergen-Manuscript</code>
 
-<div class=mL>0123456789abcdefghijklmnopqrstuvwxyz&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;,."!+&#x2a;$@#%</div>
+<div class=mLMINU>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;abcdefghijklmnopqrstuvwxyz&#xe010;&#xe011;&#xe012;&#xe013;&#xe014;&#xe015;&#xe016;&#xe017;&#xe018;,."!+&#x2a;$@#%</div>
 
 写本書体は、文字通り写本風を想像して製作した書体です。
 
@@ -64,7 +77,7 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 
 #### <ruby>硬筆書体<rt class=s>juergen stylo</rt></ruby> <code>Juergen-Stylo</code>
 
-<div class=sL>0123456789abcdefghijklmnopqrstuvwxyz&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;,."!+&#x2a;$@#%</div>
+<div class=sLMINU>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;abcdefghijklmnopqrstuvwxyz&#xe010;&#xe011;&#xe012;&#xe013;&#xe014;&#xe015;&#xe016;&#xe017;&#xe018;,."!+&#x2a;$@#%</div>
 
 どちらかというとこちらのほうが、アニメなどで登場する字形により近いと思われます。
 硬筆書体という名前を当ててみましたが、フォント名はStylo (ペン) となっていて一定しません。感覚的に付けたものなので深い意味はありません。
@@ -80,6 +93,41 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant, in quant deus savir et podir me dunat, si saluarai eo cist meon fradre karlo, et in aiudha, et in cadhuna cosa, si cum om per dreit son fradra salvar dist.
 </div>
 
+<a name=minuscule></a>
+
+### 小字体 (minuscule)
+
+
+本好きの下剋上の基本文字には、香月先生によると[ひらがなカタカナのように２種類ある](https://mypage.syosetu.com/mypageblog/view/userid/372556/blogkey/2756370/)とのことです。
+
+一方、アニメなどでは大文字・小文字のように表現されており、[海外ファンダムサイト](https://ascendance-of-a-bookworm.fandom.com/wiki/Letters_and_Numbers)ではそのように解釈されています。本フォントでは今回、その解釈に合わせ、一方を「大字体」、もう一方を「小字体」として、２種類を大文字・小文字に割り振ったバージョンを設けました。フォント名に「`Minuscule`」と入っているものがそれにあたります。
+
+* `Minuscule`が入っているフォントでは、大文字で入力すると大字体が、小文字で入力すると小字体が表示されます。
+* `Minuscule`が入っていないフォントでは、大文字でも小文字でも大字体が表示されます。（※従来互換）
+
+
+
+百聞は一見にしかずですので以下に例を示します。
+
+
+|フォント名|表示|
+|---|---|
+|(入力文字列)|`Juergenschmidt`|
+|`Juergen-Stylo`|<js>Juergenschmidt</js>|
+|`Juergen-Stylo-Minuscule`|<jsMINU>Juergenschmidt</jsMINU>|
+|`Juergen-Manuscript`|<jm>Juergenschmidt</jm>|
+|`Juergen-Manuscript-Minuscule`|<jmMINU>Juergenschmidt</jmMINU>|
+
+小字体による文章の例です。
+
+<div class=mMINU>
+pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant, in quant deus savir et podir me dunat, si saluarai eo cist meon fradre karlo, et in aiudha, et in cadhuna cosa, si cum om per dreit son fradra salvar dist.
+</div>
+
+<div class=sMINU>
+pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant, in quant deus savir et podir me dunat, si saluarai eo cist meon fradre karlo, et in aiudha, et in cadhuna cosa, si cum om per dreit son fradra salvar dist.
+</div>
+
 ### カーニング(文字間隔)が調整されています。
 
 文字の組み合わせによっては、文字間が間延びして見えることがあります。
@@ -91,6 +139,8 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 例えばフェルディナンド <span class=mL>ferdinand</span>という綴りの場合、<ruby><span class=ML>f</span><rt>f</rt></ruby>と後続の<ruby><span class=mL>e</span><rt>e</rt></ruby>との間隔は、他の文字との組み合わせの場合よりも明らかに狭くなっています。いくつかの文字には、このようなカーニングが効くようになっています。
 
 なお、合字も盛り込んだのですが、魔法陣、ならぬ、プログラム上の問題があるらしく、今のところうまく表現できていません。(クラッセンブルク<js>klassenburg</js>の<js>ss</js>とかエーレンフェスト<js>ehrenfest</js>の<js>en</js>を合字にしたかった…)
+
+また、手間の都合で、カーニングは現在のところ、大字体にのみ設定しています。
 
 ### 英数字に加えて、香月先生がTwitterに投稿された大神の記号が含まれています。
 
@@ -123,15 +173,15 @@ pro deo amur et pro christian poblo et nostro commun saluament, dist di in avant
 
 有志まとめサイトには、ラテンアルファベットとの対応関係が不明なものとして、
 <span class=m>&#xe000;&#xe001;&#xe002;&#xe003;&#xe004;&#xe005;&#xe006;&#xe007;&#xe008;</span>の9文字が挙げられています。
-これらは、いわゆる外字に相当する、UnicodeのPrivate Use Area `U+E000` ～ `U+E008`として追加してあります。
+小字体ですと<span class=mMINU>&#xe010;&#xe011;&#xe011;&#xe013;&#xe014;&#xe015;&#xe016;&#xe017;&#xe018;</span>になります。
+
+これらは、いわゆる外字に相当する、UnicodeのPrivate Use Area `U+E000` ～ `U+E008`, `U+E010` ～ `U+E018`として追加してあります。
 入力方法は「Unicode 入力 方法」で検索するなどしてお調べください。
 
 
 ### 未対応の文字について
 
 本フォントでは、鈴華先生がデザインし直した基本文字のうち、0-9とa-zの文字に加え、対応関係が不明な9文字、香月先生考案の大神の記号、そして、恐縮ながら勝手に追加した句読点が含まれています。
-
-一方、鈴華先生デザインの文字の中には、香月先生のお話によると、基本文字は35種類あり、そもそも仮名のように二系統の文字が存在するとのことです。これらは、残念ながら現在のところサポートするに至っておりません。
 
 ## <ruby>使い方<rt class=m>usage</rt></ruby>
 

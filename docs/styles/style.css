@@ -1,18 +1,34 @@
 
 @font-face {
   font-family: "stylo";
-       src: url("../fonts/Juergen-Stylo-Medium.woff2") format("woff2");
+       src: url("../fonts/juergen-stylo.woff2") format("woff2");
 }
 @font-face {
   font-family: "manuscript";
-       src: url("../fonts/Juergen-Manuscript-Medium.woff2") format("woff2");
+       src: url("../fonts/juergen-manu.woff2") format("woff2");
+}
+@font-face {
+  font-family: "stylo-min";
+       src: url("../fonts/juergen-stylo-min.woff2") format("woff2");
+}
+@font-face {
+  font-family: "manuscript-min";
+       src: url("../fonts/juergen-manu-min.woff2") format("woff2");
+}
+.sMINU, jsMINU { font-family: "stylo-min"; font-weight: normal; }
+.sLMINU { font-family: "stylo-min"; font-weight: normal; font-size: 18pt; 
+	word-break:break-all;
+}
+.mMINU, jmMINU, B { font-family: "manuscript-min"; font-weight: normal;}
+td B, .MLMINU { font-family: "manuscript-min"; font-weight: normal; font-size: 18pt;
+	word-break:break-all;
 }
 .s, js { font-family: "stylo"; font-weight: normal; }
 .sL { font-family: "stylo"; font-weight: normal; font-size: 18pt; 
 	word-break:break-all;
 }
-.m, jm, B { font-family: "manuscript"; font-weight: normal;}
-td B, .ML { font-family: "manuscript"; font-weight: normal; font-size: 18pt;
+.m, jm { font-family: "manuscript"; font-weight: normal;}
+.ML { font-family: "manuscript"; font-weight: normal; font-size: 18pt;
 	word-break:break-all;
 }
 code { font-family: 'Courier new', courier, monospace; }
@@ -65,7 +81,19 @@ td span { work-break; break-all; }
 }
 
 .alert {
-  width: 80%;
+  font-size: 11pt;
+  width: 85%;
   background-color: pink;
   border-radius: 10px;
+}
+
+blockquote {
+	background-color: #f0f0f0;
+	margin-left: 5em;
+}
+blockquote:before{
+  font-family: "Times New Roman", "Times Roman", "Times", serif;
+  font-size: 32pt;
+  content: '\201d';
+  margin-bottom: 0pt;
 }

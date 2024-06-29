@@ -13,25 +13,44 @@ This project has been conceived for satisfying my curiosity as a fan, and is tot
 Please don't make any questions or complaint about this font to the original authors and/or to the publishers. Thank you for understanding.
 </div>
 
-[Download](https://github.com/ooharak/juergenschmidt-font/releases/tag/v1.1)
+[Download](https://github.com/ooharak/juergenschmidt-font/releases/tag/v2.0)
 
-An unofficial font implementation for a fictive script that appears in a fantasy novel _Ascendance of a Bookworm_, in Truetype / Web Open Font format.
+
+An unofficial font implementation for a fictive script that appears in a fantasy novel _Ascendance of a Bookworm_, in OpenType/ Web Open Font format.
 
 ## <ruby>Try keyboard input in rectangles below<rt class=m>try keyboard input in rectangles below</rt></ruby>
 
-### <ruby><code>Juergen-Manuscript</code><rt class=m>juergen manuscript</rt></ruby>
+### <ruby><code>Juergen-Manuscript-Minuscule</code><rt class=m>juergen manuscript minuscule</rt></ruby>
 
-<textarea class=m cols="40" rows="5" placeholder='la teste de scichicosa eut 
+<textarea class=mMINU cols="40" rows="5" placeholder='La teste de Scichicosa eut 
 enfin roule sur l echafaud.
-"vive ehrenfest", cria la foule.'>
+"Vive Ehrenfest", cria la foule.'>
 </textarea>
 
-### <ruby><code>Juergen-Stylo</code><rt class=s>juergen stylo</rt></ruby>
+### <ruby><code>Juergen-Stylo-Minuscule</code><rt class=s>juergen stylo minuscule</rt></ruby>
 
-<textarea class=s cols="40" rows="5" placeholder='la teste de scichicosa eut 
+<textarea class=sMINU cols="40" rows="5" placeholder='La teste de Scichicosa eut 
 enfin roule sur l echafaud.
-"vive ehrenfest", cria la foule.'>
+"Vive Ehrenfest", cria la foule.'>
 </textarea>
+
+## <ruby>Font naming rule<rt class=s>font naming rule</rt></ruby>
+
+
+`Juergenschmidt-` + { `Stylo` &#124; `Manuscript` } [ + `-Minuscule` ] where : 
+
+* `Stylo`: <span class=s>abcdefg</span>
+* `Manuscript`: <span class=m>abcdefg</span>
+* with `Minuscule`: Lower case codepoints are mapped to &ldquo;minuscule&rdquo; characters, e.g. : `Rosemain` -&gt; <span class=sMINU>Rosemain</span>
+* without `Minuscule`: Lower case codepoints are mapped to majuscule characters, e.g. : `Rosemain` -&gt; <span class=s>Rosemain</span>
+
+NOTE: the original author Kazuki does not call the variant as &ldquo;minuscule&rdquo; nor &ldquo;lower case&rdquo; characters;
+
+
+<blockquote cite="https://mypage.syosetu.com/mypageblog/view/userid/372556/blogkey/2756370/">
+  <p>Two types of J&uuml;rgenschmidt characters exist, such as hiragana and katakana.</p>
+  <footer><cite>3/14までの情報まとめ｜香月　美夜の活動報告. (2023, March 14). 小説家になろう. Retrieved June 29, 2024, from <a href="https://mypage.syosetu.com/mypageblog/view/userid/372556/blogkey/2756370/">https://mypage.syosetu.com/mypageblog/view/userid/372556/blogkey/2756370/</a></cite></footer>
+</blockquote>
 
 ## <ruby>Transliteration tips<rt class=s>transliteration tips</rt></ruby>
 
