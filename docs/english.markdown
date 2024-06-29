@@ -13,7 +13,7 @@ This project has been conceived for satisfying my curiosity as a fan, and is tot
 Please don't make any questions or complaint about this font to the original authors and/or to the publishers. Thank you for understanding.
 </div>
 
-[Download](https://github.com/ooharak/juergenschmidt-font/releases/tag/v2.0)
+[Download](https://github.com/ooharak/juergenschmidt-font/releases/tag/v2.0.1)
 
 
 An unofficial font implementation for a fictive script that appears in a fantasy novel _Ascendance of a Bookworm_, in OpenType/ Web Open Font format.

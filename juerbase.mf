@@ -759,7 +759,7 @@ beginjur("a", 6u# * lx);
 	penlabels(11,12,21,22,23);
 endchar;
 
-beginjur("b", 8u# * lx);
+beginjur("b", 7u# * lx);
 	penmonglyph(mg_t) ;
 	top z11 = (sx#, hh# * ly);
 	top z12 = (w-sx#, hh# * ly);
@@ -768,7 +768,7 @@ beginjur("b", 8u# * lx);
 	%penstroke z11e--z12e;
 
 	top z21 = (sx#+0.1w, 0.5[hh# * ly,y11]);
-	z22 = (x21, 0);
+	bot z22 = (x21, 0);
 	penpos21(mg_t, 20);
 	penpos22(mg_t, 20);
 	penstroke z21e--z22e;
@@ -778,8 +778,8 @@ beginjur("b", 8u# * lx);
 	z33 = lft z22;
 	draw z31{right}..{down}z32{down}..{left}z33;
 
-	rt z41 = (0.9w-sx#, y21);
-	bot rt z42 = (0.9w-sx#, 0);
+	rt z41 = (w-sx#, y21);
+	bot rt z42 = (w-sx#, 0);
 	penpos41(mg_t, 20);
 	penpos42(mg_t, 20);
 	penstroke z41e--z42e;
@@ -1635,11 +1635,11 @@ if has_minuscule:
   	"M" kern -.6u#, "N" kern -1.2u#,
   	"m" kern -.6u#, "n" kern -1.2u#, skipto 1;
   ligtable "F":
-  	"E" kern -2u#,
-  	"e" kern -2u#;
+  	"E" kern -2u#;
+  ligtable "f": "e" kern -2u#;
   ligtable "T":
-  	"E" kern -4u#, "A" kern -2u#, "M" kern -2u#, 
-  	"e" kern -4u#, "a" kern -2u#, "m" kern -2u#, skipto 1;
+  	"E" kern -3u#, "A" kern -2u#, "M" kern -2u#, 
+  	skipto 1;
   ligtable "O":"P":"Q":"R":
   1::
     "H" kern -.6u#,
@@ -1664,8 +1664,7 @@ if has_minuscule:
   	"A" kern -1.5u#, "L" kern -1.2u#,
   	"a" kern -1.5u#, "l" kern -1.2u#;
   ligtable "V":
-  	"A" kern -2u#,
-  	"a" kern -2u#;
+  	"A" kern -2u#;
 else:
   % when upper case and lower case share the same glyph set
   GLYPH_UPPER_A("a");
@@ -1706,7 +1705,7 @@ else:
   ligtable "A": "L" kern -1.2u#, "M" kern -.6u#;
   ligtable "E": "M" kern -.6u#, "N" kern -1.2u#, skipto 2;
   ligtable "F": "E" kern -2u#;
-  ligtable "T": "E" kern -4u#, "A" kern -2u#, "M" kern -2u#, skipto 2;
+  ligtable "T": "E" kern -3u#, "A" kern -2u#, "M" kern -2u#, skipto 2;
   ligtable "O":"P":"Q":"R":
   2::
     "H" kern -.6u#,

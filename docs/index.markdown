@@ -10,7 +10,7 @@ bodyclass: multicolumn
 
 
 PC上で表示できる、香月美夜先生の小説『本好きの下剋上』に登場する基本文字のフォントです。<br>
-コミカライズ版の鈴華先生がデザインされたものを元に作成しました。
+コミカライズ版の鈴華先生が再デザインされたものを元に作成しました。
 
 このページではこのフォントの成り立ちについて説明しています。
 
@@ -28,10 +28,11 @@ PC上で表示できる、香月美夜先生の小説『本好きの下剋上』
 
 
 <ul>
-<li><a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v2.0">
+<li><a href="https://github.com/ooharak/juergenschmidt-font/releases/tag/v2.0.1">
 フォント置き場所はこちら。 (*.ttfファイル)</a></li>
 <li><a href="online.html">試し打ちできます</a></li>
-<li><strong>2024.06.29: &#x1f195; <a href="#minuscule">ご要望のあった小字体(Minuscule)を追加しました。</a></strong></li>
+<li><strong>2024.06.30: &#x1f195; リリース物にカーニング漏れてましたので追加しました。</strong></li>
+<li>2024.06.29: &#x1f195; <a href="#minuscule">ご要望のあった小字体(Minuscule)を追加しました。</a></li>
 <li>2022.02.08: ラテンアルファベットとの対応関係が不明な9文字を追加しました。</li>
 </ul>
 
